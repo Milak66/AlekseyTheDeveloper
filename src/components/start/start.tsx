@@ -12,13 +12,14 @@ const Start: React.FC<StartProps> = (props) => {
   const [displayText, setDisplayText] = useState('');
   const i = useRef(0);
   const showCursor = useRef(true);
-  const timeoutId = useRef<NodeJS.Timeout | null>(null);
+  const timeoutId = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const toggleCursor = () => {
-    showCursor.current = !showCursor.current; 
-    setDisplayText(textA + (showCursor.current ? textB : '')); 
-    timeoutId.current = setTimeout(toggleCursor, 500);  
+    showCursor.current = !showCursor.current;
+    setDisplayText(textA + (showCursor.current ? textB : ''));
+    timeoutId.current = setTimeout(toggleCursor, 500);
   };
+
   useEffect(() => {
     const greeting = () => {
       if (i.current < textA.length) {
@@ -35,12 +36,11 @@ const Start: React.FC<StartProps> = (props) => {
 
     greeting();
 
-    return () => clearTimeout(timeoutId.current as NodeJS.Timeout);
+    return () => clearTimeout(timeoutId.current as ReturnType<typeof setTimeout>);
 
   }, []);
 
-  const {onOpenModal} = props;
-
+  const { onOpenModal } = props;
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -54,11 +54,11 @@ const Start: React.FC<StartProps> = (props) => {
       <div className="menuOfSite">
         <div className="name">{displayText}</div>
         <div className="menu">
-        <div className="action" onClick={() => scrollToSection('about')}>Обо мне</div>
-        <div className="action" onClick={() => scrollToSection('services')}>Услуги фриланса</div>
+          <div className="action" onClick={() => scrollToSection('about')}>Обо мне</div>
+          <div className="action" onClick={() => scrollToSection('services')}>Услуги фриланса</div>
           <div className="meetAutor">
             <button className="meetAutorBtn" onClick={onOpenModal}>Заказать сайт</button>
-            </div>
+          </div>
         </div>
       </div>
     </div>
