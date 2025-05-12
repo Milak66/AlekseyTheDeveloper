@@ -1,0 +1,78 @@
+.menuOfSite {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px rgb(221, 0, 0) solid;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: black;
+    z-index: 100;
+}
+
+.name {
+    color: rgb(221, 0, 0);
+    font-size: 40px;
+    width: 50%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.action {
+    font-size: 25px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    color: rgb(221, 0, 0);
+    text-align: center;
+}
+
+.meetAutor {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.meetAutorBtn {
+    padding: 10px;
+    font-size: 20px;
+    background: linear-gradient(red, rgb(169, 0, 0));
+    border: none;
+    border-radius: 25px;
+    cursor: grab;
+}
+
+@media (max-width: 768px) {
+    .menuOfSite {
+        height: 6vh;
+    }
+
+    .name {
+        width: 60%;
+        font-size: 20px;
+    }
+
+    .menu {
+        justify-content: flex-end;
+    }
+
+    .action {
+        display: none;
+    }
+
+    .meetAutor {
+
+    }
+
+    .meetAutorBtn {
+        padding: 5px;
+        border-radius: 15px;
+        font-size: 15px;
+    }
+}

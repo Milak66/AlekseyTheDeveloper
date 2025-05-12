@@ -1,0 +1,98 @@
+.aboutAutor {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 200px;
+}
+
+.title {
+    font-size: 30px;
+    color: white;
+}
+
+.description {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.aboutTrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+    height: 80vh;
+}
+
+.tradeName {
+    font-size: 30px;
+    color: white;
+}
+
+.descriptionOfTradeName {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.tradeOffers {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.trade1 {
+    width: 30%;
+    border: 1px rgb(221, 0, 0) solid;
+}
+
+.trade2 {
+    width: 30%;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -moz-border-image: -moz-linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-border-image: -webkit-linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    border-image-slice: 1;
+}
+
+.nameOfTrade {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.descriptionOfTrade {
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center;
+    text-align: center;
+}
+
+.price {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.contacts {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .descriptionOfTrade {
+        font-size: 12px;
+    }
+}
