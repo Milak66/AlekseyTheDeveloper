@@ -1,5 +1,5 @@
 .menuOfSite {
-    height: 15vh;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,7 +14,7 @@
 
 .name {
     color: rgb(221, 0, 0);
-    font-size: 40px;
+    font-size: 30px;
     width: 50%;
 }
 
@@ -50,12 +50,12 @@
 
 @media (max-width: 768px) {
     .menuOfSite {
-        height: 6vh;
+        height: 8vh;
     }
 
     .name {
-        width: 60%;
-        font-size: 20px;
+        font-size: 22px;
+        width: 65%;
     }
 
     .menu {
@@ -67,7 +67,6 @@
     }
 
     .meetAutorBtn {
-        padding: 5px;
         border-radius: 15px;
         font-size: 15px;
     }

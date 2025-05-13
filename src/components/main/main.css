@@ -92,7 +92,30 @@
 }
 
 @media (max-width: 768px) {
+    .description {
+        font-size: 20px;
+    }
+
     .descriptionOfTrade {
-        font-size: 12px;
+        font-size: 20px;
+    }
+
+    .tradeOffers {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .trade1 {
+        width: 80%;
+    }
+    
+    .trade2 {
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .price {
+        font-size: 20px;
+        text-align: center;
     }
 }
