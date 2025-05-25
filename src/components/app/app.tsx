@@ -3,19 +3,16 @@ import './app.css';
 import Start from "../start/start";
 import Main from "../main/main";
 import Modal from "../modal/modal";
-import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 const App: React.FC = () => {
-    const [openModal, setOpenModal] = useState(false);
-
-    const handleOpenOrCloseModal = () => {
-        setOpenModal(!openModal);
-    };
+    const openAutorModal = useSelector((state: RootState) => state.aleksey.openAutorModal);
 
     return (
         <div className="app">
-            {openModal ? <Modal onOpenModal={handleOpenOrCloseModal}/> : null}
-            <Start onOpenModal={handleOpenOrCloseModal}/> 
+            {openAutorModal ? <Modal/> : null}
+            <Start/> 
             <Main/>
         </div>
     )

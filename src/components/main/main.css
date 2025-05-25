@@ -1,15 +1,87 @@
-.aboutAutor {
-    height: 30vh;
+.main {
+    width: 100%;
+    height: 280vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.redBlocksPlace {
+    width: 100%;
     display: flex;
+    position: absolute;
+    justify-content: space-between;
+    height: 260vh;
+}
+
+.redBlocks1 {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    width: 10%;
+    position: relative;
+}
+
+.redBlocks2 {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    width: 10%;
+    position: relative;
+}
+
+.redBlock {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border: 1px red solid;
+    box-shadow: 0 0 2px red,
+        0 0 4px red,
+        0 -2px 4px red,
+        2px -4px 6px red,
+        2px -8px 18px red;
+}
+
+.mainBackgroundPlace {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+}
+
+.mainBackground {
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.mainContent {
+    border: 1px rgb(221, 0, 0) solid;
+    position: relative;
+    border-radius: 20px;
+}
+
+.aboutAutor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.autorDescription {
+    display: flex;
+    width: 60%;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 100px;
+    border: 1px rgb(221, 0, 0) solid;
+    border-radius: 25px;
+    justify-content: space-evenly;
+    margin-top: 150px;
+    box-sizing: border-box;
 }
 
 .title {
     font-size: 30px;
     color: white;
+    text-align: center;
 }
 
 .description {
@@ -18,104 +90,278 @@
     text-align: center;
 }
 
-.aboutTrade {
+.slider {
     display: flex;
-    flex-direction: column;
+    width: 40%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 100px;
-    height: 80vh;
 }
 
-.tradeName {
+.titleAboutSlider {
     font-size: 30px;
     color: white;
-}
-
-.descriptionOfTradeName {
-    font-size: 20px;
-    color: white;
+    padding: 10px;
     text-align: center;
 }
 
-.tradeOffers {
-    display: flex;
+.photo {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slide {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.next {
+    font-size: 30px;
+    color: rgb(221, 0, 0);
+    padding: 10px;
+    border: 1px rgb(221, 0, 0) solid;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.back {
+    font-size: 30px;
+    color: rgb(221, 0, 0);
+    padding: 10px;
+    transform: rotate(180deg);
+    border: 1px rgb(221, 0, 0) solid;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.counter {
+    color: white;
+}
+
+.frilance {
+    margin-top: 100px;
+}
+
+.frilanceTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.frTitle {
+    color: white;
+    font-size: 20px;
+    border: 1px rgb(221, 0, 0) solid;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.aboutTrade {
+    height: 80vh;
+    display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
 .trade1 {
     width: 30%;
+    height: 60vh;
     border: 1px rgb(221, 0, 0) solid;
+    border-radius: 25px;
 }
 
 .trade2 {
     width: 30%;
+    height: 60vh;
     border-radius: 25px;
-    border: 1px solid transparent;
-    border-image: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-    -moz-border-image: -moz-linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-    -webkit-border-image: -webkit-linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-    border-image-slice: 1;
+    position: relative;
+    background-color: black;
 }
 
-.nameOfTrade {
-    display: flex;
-    font-size: 30px;
-    justify-content: center;
+.trade2::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+.titleOfTrade {
     color: white;
-    margin-top: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    padding: 30px;
 }
 
 .descriptionOfTrade {
-    color: white;
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     text-align: center;
-    text-align: center;
+    color: white;
+    padding: 10px;
 }
 
-.price {
-    color: white;
+.meetAutor {
     display: flex;
     justify-content: center;
-    font-size: 30px;
-    margin-top: 40px;
+    height: 15vh;
 }
 
-.contacts {
-    color: white;
-    display: flex;
-    flex-direction: column;
+.meetAutorBtn {
+    padding: 15px;
+    border-radius: 15px;
     font-size: 20px;
+    border: none;
+    background: linear-gradient(to right, red, rgb(175, 0, 0));
+    cursor: pointer;
+}
+
+.mainContent {
+    position: relative; 
+    z-index: 2;
+}
+
+.portfolioTitle {
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+    align-items: center;
+}
+
+.prtTitle {
+    color: white;
+    font-size: 20px;
+    border: 1px rgb(221, 0, 0) solid;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.portfolioWorks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+}
+
+.work {
+    width: 30%;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.workTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.photo {
+    height: 100%;
 }
 
 @media (max-width: 768px) {
+
+    .main {
+        height: 230vh;
+    }
+
+    .redBlocksPlace {
+        height: 220vh;
+    }
+
+    .redBlock {
+        width: 10px;
+        height: 5px;
+    }
+
+    .autorDescription {
+        margin-top: 100px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
     .description {
-        font-size: 20px;
+       font-size: 15px;
+    }
+
+    .titleAboutSlider {
+      font-size: 25px;
+    }
+
+    .slide {
+        width: 150px;
+    }
+
+    .frTitle {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .aboutTrade {
+        display: flex;
+        height: 90vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .trade1,
+    .trade2 {
+        width: 80%;
+        height: 35vh;
+    }
+
+    .titleOfTrade {
+        padding: 20px;
+        font-size: 18px;
     }
 
     .descriptionOfTrade {
-        font-size: 20px;
+        font-size: 85%;
     }
 
-    .tradeOffers {
-        align-items: center;
-        flex-direction: column;
+    .meetAutor {
+        height: 10vh;
     }
 
-    .trade1 {
-        width: 80%;
-    }
-    
-    .trade2 {
-        width: 80%;
-        margin-top: 50px;
+    .portfolioWorks {
+        height: 20vh;
     }
 
-    .price {
-        font-size: 20px;
-        text-align: center;
+    .work {
+        width: 40%;
+    }
+
+    .prtTitle {
+       font-size: 15px;
+       padding: 15px;
+    }
+
+    .workTitle {
+        font-size: 15px;
     }
 }

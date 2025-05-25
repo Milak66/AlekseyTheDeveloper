@@ -16,33 +16,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh; 
+    height: 30vh; 
     position: relative;
     background-color: white;
     border: 1px solid;
     border-radius: 10px;
 }
 
-.textToUser1 {
-    font-size: 25px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.textToUser2 {
-    text-align: center;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.textToUser3 {
+.textToUser {
     font-size: 20px;
-    margin-top: 20px;
     text-align: center;
 }
 
 .contacts {
-    margin-top: 20px;
+    font-size: 20px;
     color: black;
 }
 
@@ -51,30 +38,9 @@
     text-decoration: none;
 }
 
-.send {
-    height: 15vh;
-    display: flex;
-    align-items: flex-end;
-}
-
-.sendBtn {
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 15px;
-    border: none;
-}
-
 @media (max-width: 360px) {
-    .textToUser1 {
+    .textToUser {
         font-size: 20px;
-    }
-    
-    .textToUser2 {
-        font-size: 15px;
-    }
-    
-    .textToUser3 {
-        font-size: 15px;
     }
     
     .contacts {
@@ -83,19 +49,11 @@
 }
 
 @media (min-width: 361px) and (max-width: 768px) {
-    .textToUser1 {
-        font-size: 20px;
-    }
-    
-    .textToUser2 {
-        font-size: 20px;
-    }
-    
-    .textToUser3 {
+    .textToUser {
         font-size: 20px;
     }
     
     .contacts {
         font-size: 20px;
     }
-}
+} 

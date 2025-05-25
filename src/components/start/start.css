@@ -1,9 +1,6 @@
-.menuOfSite {
+.startOfSite {
     height: 12vh;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px rgb(221, 0, 0) solid;
     position: fixed; 
     top: 0; 
     left: 0; 
@@ -15,59 +12,71 @@
 .name {
     color: rgb(221, 0, 0);
     font-size: 30px;
-    width: 50%;
+    display: flex;
+    align-items: center;
+    border: 1px rgb(221, 0, 0) solid;
+    width: 80%;
 }
 
 .menu {
+    width: 20%;
+    border-top: 1px rgb(221, 0, 0) solid;
+    border-right: 1px rgb(221, 0, 0) solid;
+    border-bottom: 1px rgb(221, 0, 0) solid;
+    
+}
+
+.titleOfSettings {
+    width: 100%;
+    font-size: 30px;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    width: 40%;
+    justify-content: center;
+    align-items: center;
+    color: rgb(221, 0, 0);
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    border: 1px rgb(221, 0, 0) solid;
+    height: 18vh;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
 }
 
 .action {
     font-size: 25px;
-    height: 15vh;
     display: flex;
     align-items: center;
     color: rgb(221, 0, 0);
     text-align: center;
 }
 
-.meetAutor {
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-}
-
-.meetAutorBtn {
-    padding: 10px;
-    font-size: 20px;
-    background: linear-gradient(red, rgb(169, 0, 0));
-    border: none;
-    border-radius: 25px;
-    cursor: grab;
-}
-
 @media (max-width: 768px) {
-    .menuOfSite {
-        height: 8vh;
+    .startOfSite {
+        height: 9vh;
     }
 
     .name {
         font-size: 22px;
-        width: 65%;
+        width: 70%;
     }
 
     .menu {
-        justify-content: flex-end;
+        width: 30%;
+    }
+
+    .titleOfSettings {
+        font-size: 22px;
     }
 
     .action {
-        display: none;
+        font-size: 20px;
     }
 
-    .meetAutorBtn {
-        border-radius: 15px;
-        font-size: 15px;
+    .options {
+        height: 14vh;
     }
 }
