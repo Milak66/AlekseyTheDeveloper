@@ -174,14 +174,14 @@
 
 .trade1 {
     width: 30%;
-    height: 60vh;
+    height: 70%;
     border: 1px rgb(221, 0, 0) solid;
     border-radius: 25px;
 }
 
 .trade2 {
     width: 30%;
-    height: 60vh;
+    height: 70%;
     border-radius: 25px;
     position: relative;
     background-color: black;
@@ -210,7 +210,6 @@
 
 .descriptionOfTrade {
     font-size: 20px;
-    margin-top: 10px;
     text-align: center;
     color: white;
     padding: 10px;
@@ -281,7 +280,7 @@
     height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 400px) and (max-width: 500px) {
 
     .main {
         height: 230vh;
@@ -297,23 +296,25 @@
     }
 
     .autorDescription {
-        margin-top: 100px;
+        margin-top: 110px;
     }
 
     .title {
-        font-size: 25px;
+        font-size: 20px;
+        margin-top: 20px;
     }
 
     .description {
        font-size: 15px;
+       padding: 10px;
     }
 
     .titleAboutSlider {
-      font-size: 25px;
+      font-size: 20px;
     }
 
     .slide {
-        width: 150px;
+        width: 100px;
     }
 
     .frTitle {
@@ -332,16 +333,190 @@
     .trade1,
     .trade2 {
         width: 80%;
-        height: 35vh;
+        height: 40%;
     }
 
     .titleOfTrade {
         padding: 20px;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .descriptionOfTrade {
-        font-size: 85%;
+        font-size: 15px;
+    }
+
+    .meetAutor {
+        height: 10vh;
+    }
+
+    .portfolioWorks {
+        height: 20vh;
+    }
+
+    .work {
+        width: 40%;
+    }
+
+    .prtTitle {
+       font-size: 15px;
+       padding: 15px;
+    }
+
+    .workTitle {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+
+    .main {
+        height: 230vh;
+    }
+
+    .redBlocksPlace {
+        height: 220vh;
+    }
+
+    .redBlock {
+        width: 10px;
+        height: 5px;
+    }
+
+    .autorDescription {
+        margin-top: 110px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .description {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .titleAboutSlider {
+      font-size: 20px;
+    }
+
+    .slide {
+        width: 100px;
+    }
+
+    .frTitle {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .aboutTrade {
+        display: flex;
+        height: 90vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .trade1,
+    .trade2 {
+        width: 80%;
+        height: 40%;
+    }
+
+    .titleOfTrade {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .descriptionOfTrade {
+        font-size: 15px;
+    }
+
+    .meetAutor {
+        height: 10vh;
+    }
+
+    .portfolioWorks {
+        height: 20vh;
+    }
+
+    .work {
+        width: 40%;
+    }
+
+    .prtTitle {
+       font-size: 15px;
+       padding: 15px;
+    }
+
+    .workTitle {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 360px) {
+
+    .main {
+        height: 240vh;
+    }
+
+    .redBlocksPlace {
+        height: 220vh;
+    }
+
+    .redBlock {
+        width: 10px;
+        height: 5px;
+    }
+
+    .autorDescription {
+        margin-top: 110px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .description {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .titleAboutSlider {
+      font-size: 20px;
+    }
+
+    .slide {
+        width: 100px;
+    }
+
+    .frTitle {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .aboutTrade {
+        display: flex;
+        height: 90vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .trade1,
+    .trade2 {
+        width: 80%;
+        height: 40%;
+    }
+
+    .titleOfTrade {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .descriptionOfTrade {
+        font-size: 13px;
     }
 
     .meetAutor {
