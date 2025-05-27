@@ -174,14 +174,12 @@
 
 .trade1 {
     width: 30%;
-    height: 70%;
     border: 1px rgb(221, 0, 0) solid;
     border-radius: 25px;
 }
 
 .trade2 {
     width: 30%;
-    height: 70%;
     border-radius: 25px;
     position: relative;
     background-color: black;
@@ -212,7 +210,7 @@
     font-size: 20px;
     text-align: center;
     color: white;
-    padding: 10px;
+    padding: 20px;
 }
 
 .meetAutor {
@@ -333,7 +331,6 @@
     .trade1,
     .trade2 {
         width: 80%;
-        height: 40%;
     }
 
     .titleOfTrade {
@@ -343,6 +340,7 @@
 
     .descriptionOfTrade {
         font-size: 15px;
+        padding: 10px;
     }
 
     .meetAutor {
@@ -420,7 +418,6 @@
     .trade1,
     .trade2 {
         width: 80%;
-        height: 40%;
     }
 
     .titleOfTrade {
@@ -430,6 +427,7 @@
 
     .descriptionOfTrade {
         font-size: 15px;
+        padding: 10px;
     }
 
     .meetAutor {
@@ -507,7 +505,6 @@
     .trade1,
     .trade2 {
         width: 80%;
-        height: 40%;
     }
 
     .titleOfTrade {
@@ -517,6 +514,7 @@
 
     .descriptionOfTrade {
         font-size: 13px;
+        padding: 10px;
     }
 
     .meetAutor {
