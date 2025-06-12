@@ -2,8 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './components/app/app';
-import store from './components/store/store';
 import { Provider } from 'react-redux';
+import store from './components/store/store';
 
 const rootElement = document.getElementById('root') as HTMLDivElement; 
 if (rootElement) { 
@@ -17,5 +17,6 @@ if (rootElement) {
   </React.StrictMode>
   );
 } else {
-  console.error("Root element with id 'root' not found!"); 
+  alert("Error! Can't open website");
+  console.error("Error! Can't open website"); 
 }
