@@ -11,35 +11,41 @@
 }
 
 .modalValue {
-    width: 80%; 
-    max-width: 500px; 
+    width: 35%;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 30vh; 
     position: relative;
-    background-color: white;
-    border: 1px solid;
+    background-color: black;
+    border: 1px purple solid;
     border-radius: 10px;
 }
 
 .textToUser {
     font-size: 20px;
     text-align: center;
+    color: white;
 }
 
 .contacts {
     font-size: 20px;
-    color: black;
+    color: white;
 }
 
 .link {
-    color: rgb(221, 0, 0);
+    color: purple;
     text-decoration: none;
 }
 
 @media (max-width: 360px) {
+
+    .modalValue {
+        width: 80%;
+    }
+
     .textToUser {
         font-size: 20px;
     }
@@ -50,6 +56,11 @@
 }
 
 @media (min-width: 400px) and (max-width: 500px) {
+
+    .modalValue {
+        width: 80%;
+    }
+
     .textToUser {
         font-size: 20px;
     }
@@ -60,6 +71,11 @@
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
+
+    .modalValue {
+        width: 80%;
+    }
+
     .textToUser {
         font-size: 18px;
     }
@@ -70,6 +86,11 @@
 }
 
 @media (min-width: 360px) and (max-width: 360px) {
+
+    .modalValue {
+        width: 80%;
+    }
+
     .textToUser {
         font-size: 15px;
     }
