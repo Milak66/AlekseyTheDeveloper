@@ -21,7 +21,7 @@
     position: relative;
     background-color: black;
     border: 1px purple solid;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .textToUser {
@@ -40,21 +40,6 @@
     text-decoration: none;
 }
 
-@media (max-width: 360px) {
-
-    .modalValue {
-        width: 80%;
-    }
-
-    .textToUser {
-        font-size: 20px;
-    }
-    
-    .contacts {
-        font-size: 15px;
-    }
-}
-
 @media (min-width: 400px) and (max-width: 500px) {
 
     .modalValue {
@@ -70,7 +55,7 @@
     }
 }
 
-@media (min-width: 300px) and (max-width: 400px) {
+@media (min-width: 390px) and (max-width: 400px) {
 
     .modalValue {
         width: 80%;
@@ -82,6 +67,22 @@
     
     .contacts {
         font-size: 18px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 380px) {
+
+    .modalValue {
+        width: 80%;
+        height: 25vh;
+    }
+
+    .textToUser {
+        font-size: 15px;
+    }
+    
+    .contacts {
+        font-size: 15px;
     }
 }
 
