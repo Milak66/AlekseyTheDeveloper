@@ -283,6 +283,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: red;
     }
     
     .autorDescription {
@@ -299,11 +300,11 @@
     }
     
     .main {
-        height: 260vh;
+        height: 300vh;
     }
     
     .redBlocksPlace {
-        height: 250vh;
+        height: 290vh;
     }
     
     .redBlock {
