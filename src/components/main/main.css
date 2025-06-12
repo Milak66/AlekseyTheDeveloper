@@ -277,7 +277,7 @@
     height: 100%;
 }
 
-@media (min-width: 400px) and (max-width: 500px) {
+@media (min-width: 500px) and (max-width: 510px) {
 
     .aboutAutor {
         flex-direction: column;
@@ -299,11 +299,121 @@
     }
 
     .main {
-        height: 235vh;
+        height: 260vh;
     }
 
     .redBlocksPlace {
-        height: 225vh;
+        height: 250vh;
+    }
+
+    .redBlock {
+        width: 10px;
+        height: 5px;
+    }
+
+    .autorDescription {
+        margin-top: 110px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .description {
+       font-size: 15px;
+       padding: 10px;
+    }
+
+    .titleAboutSlider {
+      font-size: 20px;
+    }
+
+    .slide {
+        width: 250px;
+    }
+
+    .frilance {
+        margin-top: 40px;
+    }
+
+    .frTitle {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .aboutTrade {
+        display: flex;
+        height: 90vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .trade1,
+    .trade2 {
+        width: 80%;
+    }
+
+    .titleOfTrade {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .descriptionOfTrade {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .meetAutor {
+        height: 10vh;
+    }
+
+    .portfolioWorks {
+        height: 20vh;
+    }
+
+    .work {
+        width: 40%;
+    }
+
+    .prtTitle {
+       font-size: 15px;
+       padding: 15px;
+    }
+
+    .workTitle {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 450px) {
+
+    .aboutAutor {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .autorDescription {
+        width: 90%;
+    }
+
+    .slider {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .main {
+        height: 230vh;
+    }
+
+    .redBlocksPlace {
+        height: 220vh;
     }
 
     .redBlock {
@@ -607,7 +717,7 @@
     }
 }
 
-@media (min-width: 360px) and (max-width: 360px) {
+@media (min-width: 360px) and (max-width: 370px) {
 
     .aboutAutor {
         flex-direction: column;

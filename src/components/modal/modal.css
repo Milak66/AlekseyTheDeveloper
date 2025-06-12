@@ -40,7 +40,22 @@
     text-decoration: none;
 }
 
-@media (min-width: 400px) and (max-width: 500px) {
+@media (min-width: 500px) and (max-width: 510px) {
+
+    .modalValue {
+        width: 80%;
+    }
+
+    .textToUser {
+        font-size: 19px;
+    }
+    
+    .contacts {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 450px) {
 
     .modalValue {
         width: 80%;
