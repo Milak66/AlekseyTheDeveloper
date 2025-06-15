@@ -1,7 +1,6 @@
 .main {
-    width: 100%;
-    height: 280vh;
-    overflow: hidden;
+    min-height: 100vh; 
+    max-height: auto; 
     position: relative;
 }
 
@@ -10,7 +9,7 @@
     display: flex;
     position: absolute;
     justify-content: space-between;
-    height: 260vh;
+    height: 250%;
 }
 
 .redBlocks1 {
@@ -299,15 +298,15 @@
     }
     
     .main {
-        height: 260vh;
+        height: auto; 
     }
     
     .redBlocksPlace {
-        height: 250vh;
+        height: 240%;
     }
     
     .redBlock {
-        width: 10px;
+        width: 5px;
         height: 5px;
     }
     
@@ -409,11 +408,11 @@
     }
 
     .main {
-        height: 250vh;
+        height: auto;
     }
 
     .redBlocksPlace {
-        height: 240vh;
+        height: 220%;
     }
 
     .redBlock {
@@ -519,15 +518,15 @@
     }
 
     .main {
-        height: 240vh;
+        height: auto;
     }
 
     .redBlocksPlace {
-        height: 230vh;
+        height: 230%;
     }
 
     .redBlock {
-        width: 10px;
+        width: 5px;
         height: 5px;
     }
 
@@ -629,11 +628,11 @@
     }
 
     .main {
-        height: 250vh;
+        height: auto;
     }
 
     .redBlocksPlace {
-        height: 240vh;
+        height: 240%;
     }
 
     .redBlock {
@@ -739,11 +738,11 @@
     }
 
     .main {
-        height: 280vh;
+        height: auto;
     }
 
     .redBlocksPlace {
-        height: 270vh;
+        height: 260%;
     }
 
     .redBlock {
