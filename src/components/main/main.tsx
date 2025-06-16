@@ -16,7 +16,6 @@ const Main: React.FC<MainProps> = () => {
     const next = document.querySelector('.next') as HTMLDivElement;
     const back = document.querySelector('.back') as HTMLDivElement;
     const counter = document.querySelector('.counter') as HTMLSpanElement;
-    const redBlocksPlace = document.querySelector('.redBlocksPlace') as HTMLDivElement;
     const redBlocks1 = document.querySelector('.redBlocks1') as HTMLDivElement;
     const redBlocks2 = document.querySelector('.redBlocks2') as HTMLDivElement;
     
@@ -43,7 +42,7 @@ const Main: React.FC<MainProps> = () => {
     const block5 = createBlock2('redBlock');
     const block6 = createBlock2('redBlock');
 
-    const placeHeight = redBlocksPlace.getBoundingClientRect().height;
+    const placeHeight = redBlocks1.getBoundingClientRect().height;
 
     interface Blocks {
       element: HTMLDivElement;
@@ -101,7 +100,7 @@ const Main: React.FC<MainProps> = () => {
         block.element.style.bottom = block.pos + 'px';
         block.element.style.transform = `rotate(${rotation}rad)`;
 
-        if (block.pos > redBlocksPlace.getBoundingClientRect().height) {
+        if (block.pos > redBlocks1.getBoundingClientRect().height) {
           block.pos = -block.element.getBoundingClientRect().height;
         }
       });
@@ -153,9 +152,9 @@ const Main: React.FC<MainProps> = () => {
 
   return (
     <div className="main">
-      <div className="mainBackgroundPlace">
-        <div className="mainBackground">
-          <div className="mainContent">
+      <div className="redBlocks1">
+      </div>
+      <div className="content">
           <div className="aboutAutor">
             <div className="autorDescription">
               <div className="title">
@@ -262,15 +261,13 @@ const Main: React.FC<MainProps> = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="redBlocksPlace">
-        <div className="redBlocks1">
+          <div className="redBlocks2">
+          </div> 
+        {/* <div className="redBlocks1">
         </div>
         <div className="redBlocks2">
-        </div>
+        </div> */}
       </div>
-    </div>
   );
 };
 

@@ -1,27 +1,22 @@
 .main {
-    min-height: 100vh; 
-    max-height: auto; 
-    position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
-.redBlocksPlace {
-    width: 100%;
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    height: 250%;
+.content {
+    width: 80%;
+    border: 1px purple solid;
+    border-radius: 20px;
 }
 
 .redBlocks1 {
-    height: 100%;
+    width: 10%;
     display: flex;
     align-items: flex-end;
-    width: 10%;
     position: relative;
 }
 
 .redBlocks2 {
-    height: 100%;
     display: flex;
     align-items: flex-end;
     width: 10%;
@@ -38,26 +33,6 @@
         0 -2px 4px purple,
         2px -4px 6px purple,
         2px -8px 18px purple;
-}
-
-.mainBackgroundPlace {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    height: 100%;
-}
-
-.mainBackground {
-    width: 80%;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.mainContent {
-    border: 1px purple solid;
-    position: relative;
-    border-radius: 20px;
 }
 
 .aboutAutor {
@@ -274,7 +249,7 @@
 
 .photo {
     height: 100%;
-}
+} 
 
 @media all and (max-width: 768px) {
 
@@ -295,14 +270,6 @@
         justify-content: center;
         flex-direction: column;
         margin-top: 20px;
-    }
-    
-    .main {
-        height: auto; 
-    }
-    
-    .redBlocksPlace {
-        height: 240%;
     }
     
     .redBlock {
@@ -407,14 +374,6 @@
         margin-top: 20px;
     }
 
-    .main {
-        height: auto;
-    }
-
-    .redBlocksPlace {
-        height: 220%;
-    }
-
     .redBlock {
         width: 10px;
         height: 5px;
@@ -515,14 +474,6 @@
         justify-content: center;
         flex-direction: column;
         margin-top: 20px;
-    }
-
-    .main {
-        height: auto;
-    }
-
-    .redBlocksPlace {
-        height: 230%;
     }
 
     .redBlock {
@@ -627,14 +578,6 @@
         margin-top: 20px;
     }
 
-    .main {
-        height: auto;
-    }
-
-    .redBlocksPlace {
-        height: 240%;
-    }
-
     .redBlock {
         width: 10px;
         height: 5px;
@@ -735,14 +678,6 @@
         justify-content: center;
         flex-direction: column;
         margin-top: 20px;
-    }
-
-    .main {
-        height: auto;
-    }
-
-    .redBlocksPlace {
-        height: 260%;
     }
 
     .redBlock {
