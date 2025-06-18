@@ -254,7 +254,7 @@ const Main: React.FC<MainProps> = () => {
                     <img className="photo" src="https://cdn.glitch.global/b10fa02e-f884-4559-ad0f-54ac66f86f79/thumbnails%2F%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-04-25%20%D0%B2%2010.46.55.png?1745567236666" alt="" />
                   </div>
                   <div className="workTitle">
-                    Страны
+                    Список стран
                   </div>
                   </a>
                 </div>
@@ -263,10 +263,6 @@ const Main: React.FC<MainProps> = () => {
           </div>
           <div className="redBlocks2">
           </div> 
-        {/* <div className="redBlocks1">
-        </div>
-        <div className="redBlocks2">
-        </div> */}
       </div>
   );
 };
