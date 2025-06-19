@@ -12,24 +12,24 @@
 .purpleBlocks1 {
     width: 10%;
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     position: relative;
 }
 
 .purpleBlocks2 {
     width: 10%;
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     position: relative;
 }
 
-.purpleBlock {
-    width: 50px;
-    height: 50px;
+.purpleBlock1 {
+    width: 20px;
+    height: 20px;
     position: relative;
     border: 1px purple solid;
     box-shadow: 0 0 2px purple,
@@ -277,8 +277,8 @@
     }
     
     .purpleBlock {
-        width: 10px;
-        height: 10px;
+        width: 30px;
+        height: 30px;
     }
     
     .autorDescription {
@@ -379,8 +379,8 @@
     }
 
     .purpleBlock {
-        width: 10px;
-        height: 10px;
+        width: 30px;
+        height: 30px;
     }
 
     .autorDescription {
@@ -481,8 +481,8 @@
     }
 
     .purpleBlock {
-        width: 10px;
-        height: 10px;
+        width: 30px;
+        height: 30px;
     }
 
     .autorDescription {
@@ -583,8 +583,8 @@
     }
 
     .purpleBlock {
-        width: 10px;
-        height: 10px;
+        width: 30px;
+        height: 30px;
     }
 
     .autorDescription {
@@ -685,8 +685,8 @@
     }
 
     .purpleBlock {
-        width: 10px;
-        height: 10px;
+        width: 30px;
+        height: 30px;
     }
 
     .autorDescription {
