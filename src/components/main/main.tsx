@@ -16,13 +16,13 @@ const Main: React.FC<MainProps> = () => {
     const next = document.querySelector('.next') as HTMLDivElement;
     const back = document.querySelector('.back') as HTMLDivElement;
     const counter = document.querySelector('.counter') as HTMLSpanElement;
-    const redBlocks1 = document.querySelector('.redBlocks1') as HTMLDivElement;
-    const redBlocks2 = document.querySelector('.redBlocks2') as HTMLDivElement;
+    const purpleBlocks1 = document.querySelector('.purpleBlocks1') as HTMLDivElement;
+    const purpleBlocks2 = document.querySelector('.purpleBlocks2') as HTMLDivElement;
     
     function createBlock1(blockName: string): HTMLDivElement {
       const block = document.createElement('div');
       block.classList.add(blockName);
-      redBlocks1.append(block);
+      purpleBlocks1.append(block);
       block.style.willChange = 'transform';
       return block;
     }
@@ -30,19 +30,25 @@ const Main: React.FC<MainProps> = () => {
     function createBlock2(blockName: string): HTMLDivElement {
       const block = document.createElement('div');
       block.classList.add(blockName);
-      redBlocks2.append(block);
+      purpleBlocks2.append(block);
       block.style.willChange = 'transform';
       return block;
     }
 
-    const block1 = createBlock1('redBlock');
-    const block2 = createBlock1('redBlock');
-    const block3 = createBlock1('redBlock');
-    const block4 = createBlock2('redBlock');
-    const block5 = createBlock2('redBlock');
-    const block6 = createBlock2('redBlock');
+    const block1 = createBlock1('purpleBlock');
+    const block2 = createBlock1('purpleBlock');
+    const block3 = createBlock1('purpleBlock');
+    const block4 = createBlock1('purpleBlock');
+    const block5 = createBlock1('purpleBlock');
+    const block6 = createBlock1('purpleBlock');
+    const block7 = createBlock2('purpleBlock');
+    const block8 = createBlock2('purpleBlock');
+    const block9 = createBlock2('purpleBlock');
+    const block10 = createBlock2('purpleBlock');
+    const block11 = createBlock2('purpleBlock');
+    const block12 = createBlock2('purpleBlock');
 
-    const placeHeight = redBlocks1.getBoundingClientRect().height;
+    const placeHeight = purpleBlocks1.getBoundingClientRect().height;
 
     interface Blocks {
       element: HTMLDivElement;
@@ -88,6 +94,42 @@ const Main: React.FC<MainProps> = () => {
         speed: 2,
         direction: 1
       },
+      {
+        element: block7,
+        pos: Math.random() * placeHeight,
+        speed: 2,
+        direction: 1
+      },
+      {
+        element: block8,
+        pos: Math.random() * placeHeight,
+        speed: 2,
+        direction: 1
+      },
+      {
+        element: block9,
+        pos: Math.random() * placeHeight,
+        speed: 2,
+        direction: 1
+      },
+      {
+        element: block10,
+        pos: Math.random() * placeHeight,
+        speed: 2,
+        direction: 1
+      },
+      {
+        element: block11,
+        pos: Math.random() * placeHeight,
+        speed: 2,
+        direction: 1
+      },
+      {
+        element: block12,
+        pos: Math.random() * placeHeight,
+        speed: 2,
+        direction: 1
+      },
     ];
 
     let rotation = 0;
@@ -100,7 +142,7 @@ const Main: React.FC<MainProps> = () => {
         block.element.style.bottom = block.pos + 'px';
         block.element.style.transform = `rotate(${rotation}rad)`;
 
-        if (block.pos > redBlocks1.getBoundingClientRect().height) {
+        if (block.pos > purpleBlocks1.getBoundingClientRect().height) {
           block.pos = -block.element.getBoundingClientRect().height;
         }
       });
@@ -152,7 +194,7 @@ const Main: React.FC<MainProps> = () => {
 
   return (
     <div className="main">
-      <div className="redBlocks1">
+      <div className="purpleBlocks1">
       </div>
       <div className="content">
           <div className="aboutAutor">
@@ -261,7 +303,7 @@ const Main: React.FC<MainProps> = () => {
               </div>
             </div>
           </div>
-          <div className="redBlocks2">
+          <div className="purpleBlocks2">
           </div> 
       </div>
   );

@@ -9,21 +9,21 @@
     border-radius: 20px;
 }
 
-.redBlocks1 {
+.purpleBlocks1 {
     width: 10%;
     display: flex;
     align-items: flex-end;
     position: relative;
 }
 
-.redBlocks2 {
+.purpleBlocks2 {
+    width: 10%;
     display: flex;
     align-items: flex-end;
-    width: 10%;
     position: relative;
 }
 
-.redBlock {
+.purpleBlock {
     width: 20px;
     height: 20px;
     position: relative;
@@ -272,9 +272,9 @@
         margin-top: 20px;
     }
     
-    .redBlock {
-        width: 5px;
-        height: 5px;
+    .purpleBlock {
+        width: 3px;
+        height: 3px;
     }
     
     .autorDescription {
@@ -374,9 +374,9 @@
         margin-top: 20px;
     }
 
-    .redBlock {
-        width: 10px;
-        height: 5px;
+    .purpleBlock {
+        width: 3px;
+        height: 3px;
     }
 
     .autorDescription {
@@ -476,9 +476,9 @@
         margin-top: 20px;
     }
 
-    .redBlock {
-        width: 5px;
-        height: 5px;
+    .purpleBlock {
+        width: 3px;
+        height: 3px;
     }
 
     .autorDescription {
@@ -578,9 +578,9 @@
         margin-top: 20px;
     }
 
-    .redBlock {
-        width: 10px;
-        height: 5px;
+    .purpleBlock {
+        width: 3px;
+        height: 3px;
     }
 
     .autorDescription {
@@ -680,9 +680,9 @@
         margin-top: 20px;
     }
 
-    .redBlock {
-        width: 10px;
-        height: 5px;
+    .purpleBlock{
+        width: 3px;
+        height: 3px;
     }
 
     .autorDescription {
