@@ -9,27 +9,23 @@
     border-radius: 20px;
 }
 
-.purpleBlocks1 {
+.redBlocks1 {
     width: 10%;
-    display: grid;
-    grid-template-rows: repeat(6, min-content); 
-    row-gap: 100px; 
+    display: flex;
+    align-items: flex-end;
     position: relative;
-    align-content: end; 
 }
 
-.purpleBlocks2 {
+.redBlocks2 {
+    display: flex;
+    align-items: flex-end;
     width: 10%;
-    display: grid;
-    grid-template-rows: repeat(6, min-content); 
-    row-gap: 100px;
     position: relative;
-    align-content: end; 
 }
 
-.purpleBlock {
-    width: 50px;
-    height: 50px;
+.redBlock {
+    width: 20px;
+    height: 20px;
     position: relative;
     border: 1px purple solid;
     box-shadow: 0 0 2px purple,
@@ -37,7 +33,6 @@
         0 -2px 4px purple,
         2px -4px 6px purple,
         2px -8px 18px purple;
-    margin: auto; 
 }
 
 .aboutAutor {
@@ -277,9 +272,9 @@
         margin-top: 20px;
     }
     
-    .purpleBlock {
-        width: 30px;
-        height: 30px;
+    .redBlock {
+        width: 5px;
+        height: 5px;
     }
     
     .autorDescription {
@@ -379,9 +374,9 @@
         margin-top: 20px;
     }
 
-    .purpleBlock {
-        width: 30px;
-        height: 30px;
+    .redBlock {
+        width: 10px;
+        height: 5px;
     }
 
     .autorDescription {
@@ -481,9 +476,9 @@
         margin-top: 20px;
     }
 
-    .purpleBlock {
-        width: 30px;
-        height: 30px;
+    .redBlock {
+        width: 5px;
+        height: 5px;
     }
 
     .autorDescription {
@@ -583,9 +578,9 @@
         margin-top: 20px;
     }
 
-    .purpleBlock {
-        width: 30px;
-        height: 30px;
+    .redBlock {
+        width: 10px;
+        height: 5px;
     }
 
     .autorDescription {
@@ -685,9 +680,9 @@
         margin-top: 20px;
     }
 
-    .purpleBlock {
-        width: 30px;
-        height: 30px;
+    .redBlock {
+        width: 10px;
+        height: 5px;
     }
 
     .autorDescription {
