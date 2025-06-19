@@ -9,23 +9,27 @@
     border-radius: 20px;
 }
 
-.redBlocks1 {
+.purpleBlocks1 {
     width: 10%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
 }
 
-.redBlocks2 {
-    display: flex;
-    align-items: flex-end;
+.purpleBlocks2 {
     width: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
 }
 
-.redBlock {
-    width: 20px;
-    height: 20px;
+.purpleBlock {
+    width: 50px;
+    height: 50px;
     position: relative;
     border: 1px purple solid;
     box-shadow: 0 0 2px purple,
@@ -272,9 +276,9 @@
         margin-top: 20px;
     }
     
-    .redBlock {
-        width: 5px;
-        height: 5px;
+    .purpleBlock {
+        width: 30px;
+        height: 30px;
     }
     
     .autorDescription {
@@ -374,9 +378,9 @@
         margin-top: 20px;
     }
 
-    .redBlock {
-        width: 10px;
-        height: 5px;
+    .purpleBlock {
+        width: 30px;
+        height: 30px;
     }
 
     .autorDescription {
@@ -476,9 +480,9 @@
         margin-top: 20px;
     }
 
-    .redBlock {
-        width: 5px;
-        height: 5px;
+    .purpleBlock {
+        width: 30px;
+        height: 30px;
     }
 
     .autorDescription {
@@ -578,9 +582,9 @@
         margin-top: 20px;
     }
 
-    .redBlock {
-        width: 10px;
-        height: 5px;
+    .purpleBlock {
+        width: 30px;
+        height: 30px;
     }
 
     .autorDescription {
@@ -680,9 +684,9 @@
         margin-top: 20px;
     }
 
-    .redBlock {
-        width: 10px;
-        height: 5px;
+    .purpleBlock {
+        width: 30px;
+        height: 30px;
     }
 
     .autorDescription {
