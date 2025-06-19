@@ -11,19 +11,19 @@
 
 .purpleBlocks1 {
     width: 10%;
-    display: flex;
+    display: grid;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     position: relative;
 }
 
 .purpleBlocks2 {
     width: 10%;
-    display: flex;
+    display: grid;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     position: relative;
 }
 
