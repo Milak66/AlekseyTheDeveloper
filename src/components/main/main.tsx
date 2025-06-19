@@ -22,7 +22,7 @@ const Main: React.FC<MainProps> = () => {
     function createBlock1(blockName: string): HTMLDivElement {
       const block = document.createElement('div');
       block.classList.add(blockName);
-      redBlocks1.append(block);
+      redBlocks1!.append(block);
       block.style.willChange = 'transform';
       return block;
     }
@@ -30,19 +30,29 @@ const Main: React.FC<MainProps> = () => {
     function createBlock2(blockName: string): HTMLDivElement {
       const block = document.createElement('div');
       block.classList.add(blockName);
-      redBlocks2.append(block);
+      redBlocks2!.append(block);
       block.style.willChange = 'transform';
       return block;
     }
 
-    const block1 = createBlock1('redBlock');
-    const block2 = createBlock1('redBlock');
-    const block3 = createBlock1('redBlock');
-    const block4 = createBlock2('redBlock');
-    const block5 = createBlock2('redBlock');
-    const block6 = createBlock2('redBlock');
+    // Создаем временный блок, чтобы измерить его высоту
+    const tempBlock = createBlock1('redBlock');
+    const blockSize = tempBlock.getBoundingClientRect().height;
+    tempBlock.remove(); // Удаляем временный блок
 
-    const placeHeight = redBlocks1.getBoundingClientRect().height;
+    const placeHeight = redBlocks1!.getBoundingClientRect().height;
+    const maxBlocks = 5; // Максимальное количество блоков (уменьшено)
+    let numberOfBlocks = Math.floor(placeHeight / (blockSize * 5)); // Уменьшаем количество блоков
+    numberOfBlocks = Math.min(numberOfBlocks, maxBlocks); // Ограничиваем количество блоков
+
+    const blocks1: HTMLDivElement[] = [];
+    const blocks2: HTMLDivElement[] = [];
+
+    for (let i = 0; i < numberOfBlocks; i++) {
+      blocks1.push(createBlock1('redBlock'));
+      blocks2.push(createBlock2('redBlock'));
+    }
+
 
     interface Blocks {
       element: HTMLDivElement;
@@ -51,56 +61,30 @@ const Main: React.FC<MainProps> = () => {
       direction: number;
     }
 
-    const blocks: Blocks[] = [
-      {
-        element: block1,
+    const createAnimatedBlocks = (blocks: HTMLDivElement[]): Blocks[] => {
+      return blocks.map(block => ({
+        element: block,
         pos: Math.random() * placeHeight,
         speed: 2,
         direction: 1
-      },
-      {
-        element: block2,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block3,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block4,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block5,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block6,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-    ];
+      }));
+    };
+
+    const animatedBlocks1 = createAnimatedBlocks(blocks1);
+    const animatedBlocks2 = createAnimatedBlocks(blocks2);
+    const allAnimatedBlocks = [...animatedBlocks1, ...animatedBlocks2];
 
     let rotation = 0;
     const rotationSpeed = 0.01;
 
     const animate = () => {
-      blocks.forEach(block => {
+      allAnimatedBlocks.forEach(block => {
         block.pos += block.direction * block.speed;
         rotation += rotationSpeed;
         block.element.style.bottom = block.pos + 'px';
         block.element.style.transform = `rotate(${rotation}rad)`;
 
-        if (block.pos > redBlocks1.getBoundingClientRect().height) {
+        if (block.pos > redBlocks1!.getBoundingClientRect().height) {
           block.pos = -block.element.getBoundingClientRect().height;
         }
       });
