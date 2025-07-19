@@ -23,6 +23,26 @@ const Start: React.FC<StartProps> = () => {
     timeoutId.current = setTimeout(toggleCursor, 500);
   };
 
+  useEffect(() => {
+    const greeting = () => {
+      if (i.current < textA.length) {
+        const nextChar = textA.charAt(i.current);
+        i.current++;
+
+        dispatch(writeFCText(prev => prev + nextChar));
+
+        timeoutId.current = setTimeout(greeting, speedGreeting);
+      } else {
+        timeoutId.current = setTimeout(toggleCursor, 500);
+      }
+    };
+
+    greeting();
+
+    return () => clearTimeout(timeoutId.current as ReturnType<typeof setTimeout>);
+
+  }, []);
+
   const handleOpenModal = (): void => {
     dispatch(onOpenMenuModal());
   }
@@ -49,26 +69,6 @@ const Start: React.FC<StartProps> = () => {
       return;
     }
   }
-
-  useEffect(() => {
-    const greeting = () => {
-      if (i.current < textA.length) {
-        const nextChar = textA.charAt(i.current);
-        i.current++;
-
-        dispatch(writeFCText(prev => prev + nextChar));
-
-        timeoutId.current = setTimeout(greeting, speedGreeting);
-      } else {
-        timeoutId.current = setTimeout(toggleCursor, 500);
-      }
-    };
-
-    greeting();
-
-    return () => clearTimeout(timeoutId.current as ReturnType<typeof setTimeout>);
-
-  }, []);
 
   return (
     <div className="start">
