@@ -253,13 +253,13 @@ const Main: React.FC<MainProps> = () => {
             </div>
             <div className="aboutTrade">
               <div className="trade1">
-                <div className="titleOfTrade">Простой сайт</div>
+                <div className="titleOfTrade">Сайт-визитка</div>
                 <div className="descriptionOfTrade">
                   Хочешь стильный и лаконичный сайт, который будет выглядеть круто и работать быстро? Сделаю для тебя сайт, в котором будет только самое необходимое: информация о тебе, твои контакты и примеры работ (если есть). Никаких лишних деталей, только чистый дизайн и удобство для посетителей.
                 </div>
               </div>
               <div className="trade2">
-                <div className="titleOfTrade">Сложный сайт</div>
+                <div className="titleOfTrade">Веб-проект</div>
                 <div className="description">
                   <div className="descriptionOfTrade">
                     Хочешь не просто сайт-визитку, а целый онлайн-мир? Сделаю для тебя расширенный многостраничный сайт с индивидуальным дизайном, где ты сможешь создать всё, что угодно: блог, портфолио, сайт для своей команды или даже интерактивное приложение с разными разделами и возможностями.

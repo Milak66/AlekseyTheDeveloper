@@ -6,7 +6,9 @@ import Modal from "../modal/modal";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 
-const App: React.FC = () => {
+interface AppProps {};
+
+const App: React.FC<AppProps> = () => {
     const openAutorModal = useSelector((state: RootState) => state.aleksey.openAutorModal);
 
     return (

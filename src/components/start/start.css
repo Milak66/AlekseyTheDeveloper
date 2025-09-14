@@ -5,24 +5,23 @@
     top: 0; 
     left: 0; 
     width: 100%; 
-    background-color: black;
+    background-color: rgb(234, 234, 234);
+    border-bottom: 1px rgb(166, 0, 166) solid;
     z-index: 100;
 }
 
 .name {
-    color: purple;
+    color: rgb(166, 0, 166);
     font-size: 30px;
+    margin-left: 2px;
     display: flex;
     align-items: center;
-    border: 1px purple solid;
     width: 80%;
 }
 
 .menu {
     width: 20%;
-    border-top: 1px purple solid;
-    border-right: 1px purple solid;
-    border-bottom: 1px purple solid;
+    border-left: 1px rgb(166, 0, 166) solid;
 }
 
 .titleOfSettings {
@@ -32,24 +31,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: purple;
+    color: rgb(166, 0, 166);
 }
 
 .options {
     display: flex;
     align-items: center;
-    border: 1px purple solid;
+    border-bottom: 1px rgb(166, 0, 166) solid;
+    border-left: 1px rgb(166, 0, 166) solid;
+    border-right: 1px rgb(166, 0, 166) solid;
     height: 18vh;
     flex-direction: column;
     justify-content: space-around;
-    background-color: black;
+    background-color: rgb(234, 234, 234);
 }
 
 .action {
     font-size: 25px;
     display: flex;
     align-items: center;
-    color: purple;
+    color: rgb(166, 0, 166);
     text-align: center;
 }
 

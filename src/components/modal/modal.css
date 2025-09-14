@@ -19,24 +19,22 @@
     align-items: center;
     height: 30vh; 
     position: relative;
-    background-color: black;
-    border: 1px purple solid;
+    background-color: rgb(234, 234, 234);
+    border: 1px rgb(166, 0, 166) solid;
     border-radius: 15px;
 }
 
 .textToUser {
     font-size: 20px;
     text-align: center;
-    color: white;
 }
 
 .contacts {
     font-size: 20px;
-    color: white;
 }
 
 .link {
-    color: purple;
+    color: rgb(166, 0, 166);
     text-decoration: none;
 }
 
