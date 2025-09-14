@@ -1,3 +1,7 @@
 body {
     margin: auto;
 }
+
+::selection {  
+    background: rgb(254, 168, 254);
+}  
