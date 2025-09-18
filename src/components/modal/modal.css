@@ -38,7 +38,31 @@
     text-decoration: none;
 }
 
-@media (min-width: 500px) and (max-width: 510px) {
+@media all and (max-width: 768px) {
+
+    .modalValue {
+        width: 60%;
+        margin-top: 2vw;
+        height: 40vw; 
+        border-radius: 3vw;
+    }
+    
+    .textToUser {
+        font-size: 3vw;
+        text-align: center;
+    }
+    
+    .contacts {
+        font-size: 3vw;
+    }
+    
+    .link {
+        color: rgb(166, 0, 166);
+        text-decoration: none;
+    }
+}
+
+/* @media (min-width: 500px) and (max-width: 510px) {
 
     .modalValue {
         width: 80%;
@@ -112,4 +136,4 @@
     .contacts {
         font-size: 15px;
     }
-}
+} */
