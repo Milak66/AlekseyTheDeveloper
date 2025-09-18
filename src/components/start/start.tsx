@@ -76,11 +76,8 @@ const Start: React.FC<StartProps> = () => {
         <div className="name"><p>{displayText}</p></div>
         <div className="menu">
           <div className="titleOfSettings">
-          <p onClick={handleOpenModal}>
-          <span className="justText">Разделы</span> 
-          <span className="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg></span>
+          <p className="justText" onClick={handleOpenModal}>
+          Разделы
           </p>
           </div>
           {showModal()}

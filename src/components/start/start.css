@@ -1,5 +1,5 @@
 .startOfSite {
-    height: 12vh;
+    height: 6vw;
     display: flex;
     position: fixed; 
     top: 0; 
@@ -12,7 +12,7 @@
 
 .name {
     color: rgb(166, 0, 166);
-    font-size: 30px;
+    font-size: 2vw;
     margin-left: 2px;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
 
 .titleOfSettings {
     width: 100%;
-    font-size: 30px;
+    font-size: 2vw;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -40,14 +40,14 @@
     border-bottom: 1px rgb(166, 0, 166) solid;
     border-left: 1px rgb(166, 0, 166) solid;
     border-right: 1px rgb(166, 0, 166) solid;
-    height: 18vh;
+    height: 10vw;
     flex-direction: column;
     justify-content: space-around;
     background-color: rgb(234, 234, 234);
 }
 
 .action {
-    font-size: 25px;
+    font-size: 2vw;
     display: flex;
     align-items: center;
     color: rgb(166, 0, 166);
@@ -56,11 +56,11 @@
 
 @media all and (max-width: 768px) {
     .startOfSite {
-        height: 9vh;
+        height: 14vw;
     }
 
     .name {
-        font-size: 22px;
+        font-size: 5vw;
         width: 70%;
     }
 
@@ -69,19 +69,19 @@
     }
 
     .titleOfSettings {
-        font-size: 22px;
+        font-size: 5vw;
     }
 
     .action {
-        font-size: 20px;
+        font-size: 5vw;
     }
 
     .options {
-        height: 14vh;
+        height: 22vw;
     }
 }
 
-@media (min-width: 400px) and (max-width: 500px) {
+/* @media (min-width: 400px) and (max-width: 500px) {
     .startOfSite {
         height: 9vh;
     }
@@ -133,4 +133,4 @@
     .options {
         height: 14vh;
     }
-}
+} */
