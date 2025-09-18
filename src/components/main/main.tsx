@@ -16,6 +16,7 @@ const Main: React.FC<MainProps> = () => {
     const next = document.querySelector('.next') as HTMLDivElement;
     const back = document.querySelector('.back') as HTMLDivElement;
     const counter = document.querySelector('.counter') as HTMLSpanElement;
+    const counterGlobal = document.querySelector('.counterGlobal') as HTMLSpanElement;
     const purpleBlocks1 = document.querySelector('.purpleBlocks1') as HTMLDivElement;
     const purpleBlocks2 = document.querySelector('.purpleBlocks2') as HTMLDivElement;
     
@@ -170,6 +171,7 @@ const Main: React.FC<MainProps> = () => {
         }
 
         counter.textContent = `${slideIndex}`;
+        counterGlobal.textContent = `/${slides.length}`
       };
 
       showSlide(slideIndex);
@@ -203,13 +205,17 @@ const Main: React.FC<MainProps> = () => {
                 Обо мне
               </div>
               <div className="description">
-                Меня зовут Алексей, я опытный фронтенд-разработчик. За моими плечами разработка множества веб-сайтов различной сложности.
-                Я владею версткой – HTML и CSS и могу создавать сайты, несколькими языками программирования – JavaScript и TypeScript, с помощью которых могу добавлять сайтам функциональность, а также хорошо знаю библиотеку React для создания приложений.
+                Меня зовут Алексей, я опытный фулстек-разработчик. За моими плечами 
+                разработка множества веб-сайтов различной сложности.
+              Мои навыки вы можете посмотреть ниже, скоро я смогу добавить еще 
+              несколько. На данный момент ищу работу в айти сфере, а пока ищу готов 
+              использовать свои навыки чтобы создать вам качественный сайт-визитку или 
+              даже целое приложение(все подробности ниже).
               </div>
             </div>
             <div className="slider">
               <div className="titleAboutSlider">
-                Мой стек <span className="counter"></span><span>/6</span>
+                Мой стек <span className="counter"></span><span className="counterGlobal"></span>
               </div>
               <div className="next">
                 A
@@ -237,6 +243,10 @@ const Main: React.FC<MainProps> = () => {
                 </div>
                 <div className="slide">
                   <img className="photo" src="https://cdn.glitch.global/b10fa02e-f884-4559-ad0f-54ac66f86f79/thumbnails%2Fredux.webp?1744810757777"
+                    alt="" />
+                </div>
+                <div className="slide">
+                  <img className="photo" src="https://avatars.mds.yandex.net/i?id=a72fc454e8c4fca86fd5b92f351ec25b8515d42b-16458733-images-thumbs&n=13"
                     alt="" />
                 </div>
               </div>
