@@ -5,7 +5,7 @@
     top: 0; 
     left: 0; 
     width: 100%; 
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(224, 224, 224);
     border-bottom: 1px rgb(166, 0, 166) solid;
     z-index: 100;
 }

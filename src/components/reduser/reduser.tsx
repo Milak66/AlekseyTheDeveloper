@@ -4,12 +4,14 @@ interface InitialState {
     displayText: string;
     openMenuModal: boolean;
     openAutorModal: boolean;
+    userData: string;
 }
 
 const initialState: InitialState = {
     displayText: '',
     openMenuModal: false,
-    openAutorModal: false
+    openAutorModal: false,
+    userData: ''
 }
 
 const alekseyReducer = createSlice({
@@ -19,23 +21,27 @@ const alekseyReducer = createSlice({
      writeText: (state, action: PayloadAction<(string)>) => {
         state.displayText = action.payload;
      },
-     writeFCText: (state, action: PayloadAction<(prev: string) => string>) => {
-        state.displayText = action.payload(state.displayText);
+     appendChar: (state, action: PayloadAction<string>) => {
+        state.displayText += action.payload;
      },
      onOpenMenuModal: (state) => {
         state.openMenuModal = !state.openMenuModal;
      },
      onOpenAutorModal: (state) => {
         state.openAutorModal = !state.openAutorModal;
+     },
+     setUserData: (state, action: PayloadAction<(string)>) => {
+        state.userData = action.payload;
      }
     },
 });
   
 export const {
     writeText,
-    writeFCText,
+    appendChar,
     onOpenMenuModal,
-    onOpenAutorModal
+    onOpenAutorModal,
+    setUserData
 } = alekseyReducer.actions;
   
 export default alekseyReducer.reducer;

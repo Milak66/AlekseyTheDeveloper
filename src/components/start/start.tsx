@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import './start.css';
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../store/store";
-import { writeText, writeFCText, onOpenMenuModal } from "../reduser/reduser";
+import { writeText, appendChar, onOpenMenuModal } from "../reduser/reduser";
 
 interface StartProps {} 
 
@@ -28,8 +28,8 @@ const Start: React.FC<StartProps> = () => {
       if (i.current < textA.length) {
         const nextChar = textA.charAt(i.current);
         i.current++;
-
-        dispatch(writeFCText(prev => prev + nextChar));
+        
+        dispatch(appendChar(nextChar));
 
         timeoutId.current = setTimeout(greeting, speedGreeting);
       } else {
@@ -60,7 +60,7 @@ const Start: React.FC<StartProps> = () => {
     if (openMenuModal) {
       return (
         <div className="options">
-        <div className="action" onClick={() => scrollToSection('aboutAutor')}>Обо мне</div>
+        <div className="action" onClick={() => scrollToSection('main')}>Обо мне</div>
         <div className="action" onClick={() => scrollToSection('frilance')}>Фриланс</div>
         <div className="action" onClick={() => scrollToSection('portfolio')}>Портфолио</div>
       </div>

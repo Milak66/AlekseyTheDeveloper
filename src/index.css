@@ -1,7 +1,12 @@
 body {
     margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(assets/697b00d2b6bcf68cbb94f9da415dec98.jpg);
 }
 
 ::selection {  
-    background: rgb(254, 168, 254);
+    background: rgb(166, 0, 166);
+    color: white;
 }  
