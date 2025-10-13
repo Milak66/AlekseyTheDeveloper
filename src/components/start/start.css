@@ -6,12 +6,12 @@
     left: 0; 
     width: 100%; 
     background-color: rgb(224, 224, 224);
-    border-bottom: 1px rgb(166, 0, 166) solid;
+    border-bottom: 1px rgb(176, 6, 243) solid;
     z-index: 100;
 }
 
 .name {
-    color: rgb(166, 0, 166);
+    color: rgb(176, 6, 243);
     font-size: 2vw;
     margin-left: 2px;
     display: flex;
@@ -21,7 +21,7 @@
 
 .menu {
     width: 20%;
-    border-left: 1px rgb(166, 0, 166) solid;
+    border-left: 1px rgb(176, 6, 243) solid;
 }
 
 .titleOfSettings {
@@ -31,15 +31,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(166, 0, 166);
+    color: rgb(176, 6, 243);
 }
 
 .options {
     display: flex;
     align-items: center;
-    border-bottom: 1px rgb(166, 0, 166) solid;
-    border-left: 1px rgb(166, 0, 166) solid;
-    border-right: 1px rgb(166, 0, 166) solid;
+    border-bottom: 1px rgb(176, 6, 243) solid;
+    border-left: 1px rgb(176, 6, 243) solid;
+    border-right: 1px rgb(176, 6, 243) solid;
     height: 10vw;
     flex-direction: column;
     justify-content: space-around;
@@ -50,7 +50,7 @@
     font-size: 2vw;
     display: flex;
     align-items: center;
-    color: rgb(166, 0, 166);
+    color: rgb(176, 6, 243);
     text-align: center;
 }
 

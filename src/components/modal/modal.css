@@ -20,7 +20,7 @@
     height: 18vw; 
     position: relative;
     background-color: rgb(234, 234, 234);
-    border: 1px rgb(166, 0, 166) solid;
+    border: 1px rgb(176, 6, 243) solid;
     border-radius: 1.5vw;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .link {
-    color: rgb(166, 0, 166);
+    color: rgb(176, 6, 243);
     text-decoration: none;
 }
 
@@ -54,11 +54,6 @@
     
     .contacts {
         font-size: 3vw;
-    }
-    
-    .link {
-        color: rgb(166, 0, 166);
-        text-decoration: none;
     }
 }
 
