@@ -249,6 +249,10 @@ const Main: React.FC<MainProps> = () => {
                   <img className="photo" src="https://avatars.mds.yandex.net/i?id=a72fc454e8c4fca86fd5b92f351ec25b8515d42b-16458733-images-thumbs&n=13"
                     alt="" />
                 </div>
+                <div className="slide">
+                  <img className="photo" src="https://dipstrategy.co.id/blog/wp-content/uploads/2024/05/nextjs.webp"
+                    alt="" />
+                </div>
               </div>
               <div className="back">
                 A
