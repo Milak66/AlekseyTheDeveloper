@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface InitialState {
+    loading: boolean
     displayText: string;
     openMenuModal: boolean;
     openAutorModal: boolean;
@@ -8,6 +9,7 @@ interface InitialState {
 }
 
 const initialState: InitialState = {
+   loading: true,
     displayText: '',
     openMenuModal: false,
     openAutorModal: false,
@@ -18,6 +20,9 @@ const alekseyReducer = createSlice({
     name: 'reduser',
     initialState,
     reducers: {
+     setLoading: (state) => {
+        state.loading = !state.loading;
+     },
      writeText: (state, action: PayloadAction<(string)>) => {
         state.displayText = action.payload;
      },
@@ -37,11 +42,12 @@ const alekseyReducer = createSlice({
 });
   
 export const {
-    writeText,
-    appendChar,
-    onOpenMenuModal,
-    onOpenAutorModal,
-    setUserData
+   setLoading,
+   writeText,
+   appendChar,
+   onOpenMenuModal,
+   onOpenAutorModal,
+   setUserData
 } = alekseyReducer.actions;
   
 export default alekseyReducer.reducer;
