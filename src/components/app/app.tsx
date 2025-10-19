@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import './app.css';
 import { useEffect } from "react";
 import Start from "../start/start";
