@@ -26,7 +26,7 @@ const App: React.FC<AppProps> = (): React.JSX.Element => {
     const showSite = (): React.JSX.Element => {
         if (loading) {
             return (
-                <LoadingSite/>
+            <LoadingSite/>
             )
         } else {
             return (
