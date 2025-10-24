@@ -6,7 +6,6 @@
 .content {
     width: 80%;
     border-radius: 2vw;
-    background-color: rgb(234, 234, 234);
 }
 
 .purpleBlocks1 {
@@ -53,7 +52,7 @@
     border-radius: 2vw;
     justify-content: space-evenly;
     box-sizing: border-box;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(234, 234, 234);
 }
 
 .title {
@@ -77,7 +76,7 @@
     flex-direction: column;
     border: 1px rgb(176, 6, 243) solid;
     border-radius: 2vw;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(234, 234, 234);
 }
 
 .titleAboutSlider {
@@ -146,7 +145,7 @@
     padding: 1.3vw;
     border-radius: 2vw;
     text-align: center;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(234, 234, 234);
 }
 
 .aboutTrade {
@@ -159,14 +158,14 @@
     width: 26vw;
     border: 1px rgb(176, 6, 243) solid;
     border-radius: 2vw;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(234, 234, 234);
 }
 
 .trade2 {
     width: 26vw;
     border-radius: 2vw;
     border: 1px rgb(176, 6, 243) solid;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(234, 234, 234);
 }
 
 .titleOfTrade {
@@ -229,7 +228,7 @@
     padding: 1.3vw;
     border-radius: 2vw;
     text-align: center;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(234, 234, 234);
 }
 
 .portfolioWorks {
@@ -281,7 +280,6 @@
         flex-direction: column;
         border: none;
         border-radius: 5vw;
-        background-color: rgb(234, 234, 234);
     }
     
     .containerOfSlides {

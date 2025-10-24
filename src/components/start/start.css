@@ -5,7 +5,7 @@
     top: 0; 
     left: 0; 
     width: 100%; 
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(234, 234, 234);
     border-bottom: 1px rgb(176, 6, 243) solid;
     z-index: 100;
 }
@@ -22,6 +22,7 @@
 .menu {
     width: 20%;
     border-left: 1px rgb(176, 6, 243) solid;
+    border-right: 1px rgb(176, 6, 243) solid;
 }
 
 .titleOfSettings {
@@ -43,7 +44,7 @@
     height: 10vw;
     flex-direction: column;
     justify-content: space-around;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(234, 234, 234);
 }
 
 .action {
