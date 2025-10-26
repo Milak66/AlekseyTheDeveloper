@@ -43,9 +43,6 @@ const Main: React.FC<MainProps> = () => {
     const block5 = createBlock2('purpleBlock');
     const block6 = createBlock2('purpleBlock');
 
-
-    const placeHeight = purpleBlocks1.getBoundingClientRect().height;
-
     interface Blocks {
       element: HTMLDivElement;
       posUp: number;
