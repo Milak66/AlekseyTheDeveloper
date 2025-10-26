@@ -39,113 +39,81 @@ const Main: React.FC<MainProps> = () => {
     const block1 = createBlock1('purpleBlock');
     const block2 = createBlock1('purpleBlock');
     const block3 = createBlock1('purpleBlock');
-    const block4 = createBlock1('purpleBlock');
-    const block5 = createBlock1('purpleBlock');
-    const block6 = createBlock1('purpleBlock');
-    const block7 = createBlock2('purpleBlock');
-    const block8 = createBlock2('purpleBlock');
-    const block9 = createBlock2('purpleBlock');
-    const block10 = createBlock2('purpleBlock');
-    const block11 = createBlock2('purpleBlock');
-    const block12 = createBlock2('purpleBlock');
+    const block4 = createBlock2('purpleBlock');
+    const block5 = createBlock2('purpleBlock');
+    const block6 = createBlock2('purpleBlock');
+
 
     const placeHeight = purpleBlocks1.getBoundingClientRect().height;
 
     interface Blocks {
       element: HTMLDivElement;
-      pos: number;
-      speed: number;
-      direction: number;
+      posUp: number;
+      posAround: number;
+      move: boolean;
     }
 
     const blocks: Blocks[] = [
       {
         element: block1,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
+        posUp: 1,
+        posAround: 1,
+        move: true
       },
       {
         element: block2,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
+        posUp: 1,
+        posAround: 1,
+        move: true
       },
       {
         element: block3,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
+        posUp: 1,
+        posAround: 1,
+        move: true
       },
       {
         element: block4,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
+        posUp: 1,
+        posAround: 1,
+        move: true
       },
       {
         element: block5,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
+        posUp: 1,
+        posAround: 1,
+        move: true
       },
       {
         element: block6,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block7,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block8,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block9,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block10,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block11,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
-      },
-      {
-        element: block12,
-        pos: Math.random() * placeHeight,
-        speed: 2,
-        direction: 1
+        posUp: 1,
+        posAround: 1,
+        move: true
       },
     ];
 
-    let rotation = 0;
-    const rotationSpeed = 0.01;
-
     const animate = () => {
       blocks.forEach(block => {
-        block.pos += block.direction * block.speed;
-        rotation += rotationSpeed;
-        block.element.style.bottom = block.pos + 'px';
-        block.element.style.transform = `rotate(${rotation}rad)`;
-
-        if (block.pos > purpleBlocks1.getBoundingClientRect().height) {
-          block.pos = -block.element.getBoundingClientRect().height;
+        if (block.move) {
+          if (block.posUp < 100) {
+            block.posUp += 1.5;
+          } else {
+            block.move = false;
+            block.posUp -= 1.5;
+          }
+        } else {
+          if (block.posUp > 1) {
+            block.posUp -= 1.5;
+          } else {
+            block.move = true;
+            block.posUp += 1.5;
+          }
         }
+
+        block.posAround += 2;
+
+        block.element.style.transform = `rotate(${block.posAround}deg)`;
+        block.element.style.bottom = `${block.posUp}px`;
       });
       requestAnimationFrame(animate);
     };

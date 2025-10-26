@@ -11,20 +11,24 @@
 .purpleBlocks1 {
     width: 10%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     position: relative;
 }
 
 .purpleBlocks2 {
     width: 10%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     position: relative;
 }
 
 .purpleBlock {
-    width: 1vw;
-    height: 1vw;
+    width: 3vw;
+    height: 3vw;
     position: relative;
     border: 1px rgb(176, 6, 243) solid;
     box-shadow: 0 0 2px rgb(176, 6, 243),
@@ -320,8 +324,8 @@
     }
 
     .purpleBlock {
-        width: 1vw;
-        height: 1vw;
+        width: 5vw;
+        height: 5vw;
     }
     
     .title {
