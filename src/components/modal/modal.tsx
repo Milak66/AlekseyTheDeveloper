@@ -52,8 +52,8 @@ const Modal: React.FC<ModalProps> = () => {
         <label className="textToUser"><span className="normalTextToUser">
           Напишите мне чтобы мы смогли договорится о вашем заказе</span> 
         <br/><span className="smallTextToUser">
-          Обязательно укажите свой ник в дискорде или телеграме чтобы я мог 
-          с вами связатся</span></label>
+          Обязательно укажите свой ник в дискорде или телеграме</span></label>
+          <label className="textToUserToHelp" htmlFor="">Если не получается отправить здесь то напишите мне ваш заказ в телеграме - @Aleksey_kuznez</label>
         <textarea
           className="textForEmail"
           name="username"

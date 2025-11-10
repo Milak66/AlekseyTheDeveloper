@@ -261,6 +261,22 @@
     text-align: center;
 }
 
+.workContent1 {
+    width: 20vw;
+    height: 20vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/Снимок\ экрана\ 2025-11-10\ в\ 17.29.23.png);
+}
+
+.workContent2 {
+    width: 20vw;
+    height: 20vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/Снимок\ экрана\ 2025-11-10\ в\ 17.28.55.png);
+}
+
 @media all and (max-width: 768px) {
 
     .aboutAutor {

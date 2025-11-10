@@ -40,7 +40,12 @@
 }
   
 .smallTextToUser {
-    font-size: 1.2vw;
+    font-size: 1.2vw;;
+}
+
+.textToUserToHelp {
+  font-size: 1.2vw;
+  text-align: center;
 }
   
 .textForEmail {
@@ -84,6 +89,10 @@
     }
   
     .smallTextToUser {
+      font-size: 2.5vw;
+    }
+
+    .textToUserToHelp {
       font-size: 2.5vw;
     }
   
