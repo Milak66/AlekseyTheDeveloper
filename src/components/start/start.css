@@ -62,6 +62,7 @@
 
     .start {
         height: 12vw;
+        grid-template-columns: [start] 70vw [middle] 30vw [end];
         border-radius: 4vw;
         background-color: transparent; 
     }
