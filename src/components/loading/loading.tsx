@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import './loading.css';
 
-interface LoadingProps {}
+interface LoadingProps {};
 
 const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
   const darkFunRef = useRef<HTMLDivElement>(null);
