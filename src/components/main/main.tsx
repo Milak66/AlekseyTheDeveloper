@@ -38,8 +38,10 @@ const Main: React.FC<MainProps> = () => {
 
     const windowWidth = window.innerWidth;
 
+    const isMobileDevice = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
     function animation() {
-      if (windowWidth > 768) {
+      if (windowWidth > 800 && !isMobileDevice) {
         const block1 = createBlock1('purpleBlock');
         const block2 = createBlock1('purpleBlock');
         const block3 = createBlock1('purpleBlock');
