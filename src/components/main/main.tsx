@@ -36,86 +36,189 @@ const Main: React.FC<MainProps> = () => {
       return block;
     }
 
-    const block1 = createBlock1('purpleBlock');
-    const block2 = createBlock1('purpleBlock');
-    const block3 = createBlock1('purpleBlock');
-    const block4 = createBlock2('purpleBlock');
-    const block5 = createBlock2('purpleBlock');
-    const block6 = createBlock2('purpleBlock');
+    const windowWidth = window.innerWidth;
 
-    interface Blocks {
-      element: HTMLDivElement;
-      posUp: number;
-      posAround: number;
-      move: boolean;
+    function animation() {
+      if (windowWidth > 768) {
+        const block1 = createBlock1('purpleBlock');
+        const block2 = createBlock1('purpleBlock');
+        const block3 = createBlock1('purpleBlock');
+        const block4 = createBlock2('purpleBlock');
+        const block5 = createBlock2('purpleBlock');
+        const block6 = createBlock2('purpleBlock');
+    
+        interface Blocks {
+          element: HTMLDivElement;
+          posUp: number;
+          posAround: number;
+          move: boolean;
+        }
+    
+        const blocks: Blocks[] = [
+          {
+            element: block1,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block2,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block3,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block4,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block5,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block6,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          }
+        ];
+    
+        const animate = () => {
+          blocks.forEach(block => {
+            if (block.move) {
+              if (block.posUp < 100) {
+                block.posUp += 1.5;
+              } else {
+                block.move = false;
+                block.posUp -= 1.5;
+              }
+            } else {
+              if (block.posUp > 1) {
+                block.posUp -= 1.5;
+              } else {
+                block.move = true;
+                block.posUp += 1.5;
+              }
+            }
+    
+            block.posAround += 2;
+    
+            block.element.style.transform = `rotate(${block.posAround}deg)`;
+            block.element.style.bottom = `${block.posUp}px`;
+          });
+          requestAnimationFrame(animate);
+        };
+    
+        animate();
+      } else {
+        const block1 = createBlock1('purpleBlock');
+        const block2 = createBlock1('purpleBlock');
+        const block3 = createBlock1('purpleBlock');
+        const block4 = createBlock1('purpleBlock');
+        const block5 = createBlock2('purpleBlock');
+        const block6 = createBlock2('purpleBlock');
+        const block7 = createBlock2('purpleBlock');
+        const block8 = createBlock2('purpleBlock');
+    
+        interface Blocks {
+          element: HTMLDivElement;
+          posUp: number;
+          posAround: number;
+          move: boolean;
+        }
+    
+        const blocks: Blocks[] = [
+          {
+            element: block1,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block2,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block3,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block4,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block5,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block6,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block7,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          },
+          {
+            element: block8,
+            posUp: 1,
+            posAround: 1,
+            move: true
+          }
+        ];
+    
+        const animate = () => {
+          blocks.forEach(block => {
+            if (block.move) {
+              if (block.posUp < 100) {
+                block.posUp += 1.5;
+              } else {
+                block.move = false;
+                block.posUp -= 1.5;
+              }
+            } else {
+              if (block.posUp > 1) {
+                block.posUp -= 1.5;
+              } else {
+                block.move = true;
+                block.posUp += 1.5;
+              }
+            }
+    
+            block.posAround += 2;
+    
+            block.element.style.transform = `rotate(${block.posAround}deg)`;
+            block.element.style.bottom = `${block.posUp}px`;
+          });
+          requestAnimationFrame(animate);
+        };
+    
+        animate();
+      }
     }
 
-    const blocks: Blocks[] = [
-      {
-        element: block1,
-        posUp: 1,
-        posAround: 1,
-        move: true
-      },
-      {
-        element: block2,
-        posUp: 1,
-        posAround: 1,
-        move: true
-      },
-      {
-        element: block3,
-        posUp: 1,
-        posAround: 1,
-        move: true
-      },
-      {
-        element: block4,
-        posUp: 1,
-        posAround: 1,
-        move: true
-      },
-      {
-        element: block5,
-        posUp: 1,
-        posAround: 1,
-        move: true
-      },
-      {
-        element: block6,
-        posUp: 1,
-        posAround: 1,
-        move: true
-      },
-    ];
-
-    const animate = () => {
-      blocks.forEach(block => {
-        if (block.move) {
-          if (block.posUp < 100) {
-            block.posUp += 1.5;
-          } else {
-            block.move = false;
-            block.posUp -= 1.5;
-          }
-        } else {
-          if (block.posUp > 1) {
-            block.posUp -= 1.5;
-          } else {
-            block.move = true;
-            block.posUp += 1.5;
-          }
-        }
-
-        block.posAround += 2;
-
-        block.element.style.transform = `rotate(${block.posAround}deg)`;
-        block.element.style.bottom = `${block.posUp}px`;
-      });
-      requestAnimationFrame(animate);
-    };
-
-    animate();
+    animation();
 
     if (slider && containerOfSlides && slides.length > 0) {
       let slideIndex = 1;

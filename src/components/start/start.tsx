@@ -74,15 +74,13 @@ const Start: React.FC<StartProps> = () => {
     <div className="start">
       <div className="startOfSite">
         <div className="name">{displayText}</div>
-        <div className="menu">
-          <div className="titleOfSettings">
-          <div className="justText" onClick={handleOpenModal}>
+      </div>
+      <div className="menu">
+          <div className="titleOfSettings" onClick={handleOpenModal}>
           Разделы
-          </div>
           </div>
           {showModal()}
         </div>
-      </div>
     </div>
   );
 };
