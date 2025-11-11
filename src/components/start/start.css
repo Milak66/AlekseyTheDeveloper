@@ -6,8 +6,11 @@
     left: 0; 
     width: 100%; 
     background-color: rgb(234, 234, 234);
+    border-left: 1px rgb(176, 6, 243) solid;
+    border-top: 1px rgb(176, 6, 243) solid;
     border-bottom: 1px rgb(176, 6, 243) solid;
     z-index: 100;
+    border-radius: 2vw;
 }
 
 .name {
@@ -37,14 +40,13 @@
 
 .options {
     display: flex;
-    align-items: center;
-    border-bottom: 1px rgb(176, 6, 243) solid;
-    border-left: 1px rgb(176, 6, 243) solid;
-    border-right: 1px rgb(176, 6, 243) solid;
-    height: 10vw;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    height: 10vw;
+    border: 1px rgb(176, 6, 243) solid;
     background-color: rgb(234, 234, 234);
+    border-radius: 2vw;
 }
 
 .action {
@@ -58,6 +60,7 @@
 @media all and (max-width: 768px) {
     .startOfSite {
         height: 14vw;
+        border-radius: 4vw;
     }
 
     .name {
@@ -79,5 +82,6 @@
 
     .options {
         height: 22vw;
+        border-radius: 4vw;
     }
 }
