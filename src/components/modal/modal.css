@@ -40,11 +40,11 @@
 }
   
 .smallTextToUser {
-    font-size: 1.2vw;;
+  font-size: 1.5vw;
 }
 
 .textToUserToHelp {
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   text-align: center;
 }
   
@@ -52,13 +52,13 @@
       width: 30vw;
       height: 7vw;
       resize: none;
-      font-size: 1vw;
+      font-size: 1.5vw;
 }
   
 .btnSubmit {
       padding: 1vw;
       border-radius: 2vw;
-      font-size: 1vw;
+      font-size: 1.5vw;
       border: none;
       background: linear-gradient(to right, rgb(176, 6, 243), rgb(166, 0, 166));
       cursor: pointer;
@@ -75,7 +75,7 @@
   
     .form {
       display: flex;
-      height: 43vw;
+      height: 50vw;
       flex-direction: column;
       justify-content: space-between;
     }
@@ -89,23 +89,23 @@
     }
   
     .smallTextToUser {
-      font-size: 2.5vw;
+      font-size: 3vw;
     }
 
     .textToUserToHelp {
-      font-size: 2.5vw;
+      font-size: 3vw;
     }
   
     .textForEmail {
       width: 60vw;
       height: 15vw;
       resize: none;
-      font-size: 2vw;
+      font-size: 3vw;
     }
   
     .btnSubmit {
       padding: 1.5vw;
       border-radius: 2vw;
-      font-size: 2.5vw;
+      font-size: 3vw;
     }
 }
