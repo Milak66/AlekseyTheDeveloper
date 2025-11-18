@@ -69,13 +69,13 @@
     .modalValue {
       width: 80vw;
       margin-top: 2vw;
-      height: 52vw;
+      height: 55vw;
       border-radius: 3vw;
     }
   
     .form {
       display: flex;
-      height: 48vw;
+      height: 50vw;
       flex-direction: column;
       justify-content: space-between;
     }
