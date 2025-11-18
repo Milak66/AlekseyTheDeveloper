@@ -11,12 +11,12 @@
 }
   
 .modalValue {
-    width: 40vw;
+    width: 45vw;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1vw;
-    height: 22vw;
+    height: 25vw;
     position: relative;
     background-color: rgb(234, 234, 234);
     border: 1px rgb(166, 0, 166) solid;
@@ -25,7 +25,7 @@
   
 .form {
     display: flex;
-    height: 35vw;
+    height: 23vw;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +75,7 @@
   
     .form {
       display: flex;
-      height: 60vw;
+      height: 45vw;
       flex-direction: column;
       justify-content: space-between;
     }
