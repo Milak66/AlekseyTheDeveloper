@@ -25,7 +25,7 @@ const Modal: React.FC<ModalProps> = () => {
     }
 
     try {
-      const response = await fetch("https://aleksey-api.onrender.com/getData", {
+      const response = await fetch("https://aleksey-api-production.up.railway.app/getData", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
