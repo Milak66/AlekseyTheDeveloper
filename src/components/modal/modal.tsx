@@ -1,14 +1,14 @@
 import React from "react";
 import './modal.css';
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store/store";
+import { useDispatch } from "react-redux";
+// import { RootState } from "../store/store";
 import { onOpenAutorModal, setUserData } from "../reduser/reduser";
 
 interface ModalProps {} 
 
 const Modal: React.FC<ModalProps> = () => {
   const dispatch = useDispatch(); 
-  const userData = useSelector((state: RootState) => state.aleksey.userData);
+  // const userData = useSelector((state: RootState) => state.aleksey.userData);
 
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
