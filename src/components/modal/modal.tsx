@@ -1,14 +1,14 @@
 import React from "react";
 import './modal.css';
-import { useDispatch } from "react-redux";
-// import { RootState } from "../store/store";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../store/store";
 import { onOpenAutorModal, setUserData } from "../reduser/reduser";
 
 interface ModalProps {} 
 
 const Modal: React.FC<ModalProps> = () => {
   const dispatch = useDispatch(); 
-  // const userData = useSelector((state: RootState) => state.aleksey.userData);
+  const userData = useSelector((state: RootState) => state.aleksey.userData);
 
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
@@ -19,38 +19,30 @@ const Modal: React.FC<ModalProps> = () => {
   const sendData = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch('https://aleksey-api.onrender.com/getData');
-      const answer = await response.json();
-      console.log(answer);
-    } catch (err) {
-      console.log(err);
+    if (!userData.trim()) {
+      alert('Пожалуйста, заполните поле!');
+      return;
     }
 
-    // if (!userData.trim()) {
-    //   alert('Пожалуйста, заполните поле!');
-    //   return;
-    // }
+    try {
+      const response = await fetch("https://aleksey-api.onrender.com/getData", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userData }),
+      });
 
-    // try {
-    //   const response = await fetch("https://aleksey-api-production.up.railway.app/getData", {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ userData }),
-    //   });
-
-    //   if (!response.ok) {
-    //     alert('Ошибка при отправке данных');
-    //     return;
-    //   } else {
-    //     alert('Данные отправлены');
-    //   }
-    // } catch (err) {
-    //   console.log(err);
-    //   alert('Ошибка сети или сервера');
-    // }
+      if (!response.ok) {
+        alert('Ошибка при отправке данных');
+        return;
+      } else {
+        alert('Данные отправлены');
+      }
+    } catch (err) {
+      console.log(err);
+      alert('Ошибка сети или сервера');
+    }
   } 
 
   return (
