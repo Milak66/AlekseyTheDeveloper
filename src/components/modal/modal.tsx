@@ -19,30 +19,38 @@ const Modal: React.FC<ModalProps> = () => {
   const sendData = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!userData.trim()) {
-      alert('Пожалуйста, заполните поле!');
-      return;
-    }
-
     try {
-      const response = await fetch("https://aleksey-api-production.up.railway.app/getData", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userData }),
-      });
-
-      if (!response.ok) {
-        alert('Ошибка при отправке данных');
-        return;
-      } else {
-        alert('Данные отправлены');
-      }
+      const response = await fetch('https://aleksey-api-production.up.railway.app/getData');
+      const answer = await response.json();
+      alert(answer);
     } catch (err) {
       console.log(err);
-      alert('Ошибка сети или сервера');
     }
+
+    // if (!userData.trim()) {
+    //   alert('Пожалуйста, заполните поле!');
+    //   return;
+    // }
+
+    // try {
+    //   const response = await fetch("https://aleksey-api-production.up.railway.app/getData", {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ userData }),
+    //   });
+
+    //   if (!response.ok) {
+    //     alert('Ошибка при отправке данных');
+    //     return;
+    //   } else {
+    //     alert('Данные отправлены');
+    //   }
+    // } catch (err) {
+    //   console.log(err);
+    //   alert('Ошибка сети или сервера');
+    // }
   } 
 
   return (
