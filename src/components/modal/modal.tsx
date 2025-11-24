@@ -22,7 +22,7 @@ const Modal: React.FC<ModalProps> = () => {
     try {
       const response = await fetch('https://aleksey-api-production.up.railway.app/getData');
       const answer = await response.json();
-      alert(answer);
+      console.log(answer);
     } catch (err) {
       console.log(err);
     }
