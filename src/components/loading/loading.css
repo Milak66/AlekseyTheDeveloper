@@ -1,30 +1,51 @@
 .loading_place {
     display: flex;
     height: 100vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/src/assets/697b00d2b6bcf68cbb94f9da415dec98.jpg);
 }
 
 .dark_fun {
-    width: 10vw;
-    height: 10vw;
+    display: flex;
+    width: 7vw;
+    height: 7vw;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    border: 1px rgb(176, 6, 243) solid;
-    box-shadow: 0 0 2px rgb(176, 6, 243),
-        0 0 4px rgb(176, 6, 243),
-        0 -2px 4px rgb(176, 6, 243),
-        2px -4px 6px rgb(176, 6, 243),
-        2px -8px 18px rgb(176, 6, 243);
+    font-size: 5vw;
+    color: rgb(150, 0, 150);
+    border: 1px rgb(150, 0, 150) solid;
+    box-shadow: 0 0 2px rgb(150, 0, 150),
+        0 0 4px rgb(150, 0, 150),
+        0 -2px 4px rgb(150, 0, 150),
+        2px -4px 6px rgb(150, 0, 150),
+        2px -8px 18px rgb(150, 0, 150);
+}
+
+.loadingText {
+    font-size: 3vw;
+    color: rgb(150, 0, 150);
 }
 
 @media all and (max-width: 768px) {
 
     .loading_place {
-        height: 90vh
+        height: 100vh
     }
     
     .dark_fun {
-        width: 20vw;
-        height: 20vw;
+        width: 14vw;
+        height: 14vw;
+        font-size: 10vw;
+    }
+
+    .loadingText {
+        font-size: 7vw;
+        color: rgb(150, 0, 150);
     }
 }

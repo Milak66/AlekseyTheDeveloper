@@ -1,12 +1,15 @@
 import React, { useRef, useEffect } from "react";
 import './loading.css';
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 interface LoadingProps {};
 
 const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
+  const textLang = useSelector((state: RootState) => state.aleksey.textLang); 
   const darkFunRef = useRef<HTMLDivElement>(null);
   let pos = 1;
-  let poss = 1;
+  let posAround = 1;
   let directionUp = true;
 
   useEffect(() => {
@@ -30,8 +33,8 @@ const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
           pos += 2;
         }
       }
-      poss += 3;
-      dark_fun!.style.transform = `rotate(${poss}deg)`;
+      posAround += 3;
+      dark_fun!.style.transform = `rotate(${posAround}deg)`;
       dark_fun!.style.bottom = pos + 'px';
 
       requestAnimationFrame(darkEnergy);
@@ -45,7 +48,8 @@ const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
 
   return (
     <div className="loading_place">
-      <div className="dark_fun" ref={darkFunRef}></div>
+      <div className="dark_fun" ref={darkFunRef}>1</div>
+      <div className="loadingText">{textLang.loadingText}</div>
     </div>
   );
 };

@@ -1,14 +1,31 @@
 import React from "react";
 import './modal.css';
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import { onOpenAutorModal, setUserData } from "../reduser/reduser";
+import { onOpenAutorModal, setUserData, onSetDataLoading } from "../reduser/reduser";
 
 interface ModalProps {} 
 
 const Modal: React.FC<ModalProps> = () => {
+  const textLang = useSelector((state: RootState) => state.aleksey.textLang); 
   const dispatch = useDispatch(); 
   const userData = useSelector((state: RootState) => state.aleksey.userData);
+  const openAutorModal = useSelector((state: RootState) => state.aleksey.openAutorModal);
+  const sendDataLoading = useSelector((state: RootState) => state.aleksey.sendDataLoading);
+
+  useEffect(() => {
+
+    if (openAutorModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [openAutorModal]);
 
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
@@ -16,15 +33,27 @@ const Modal: React.FC<ModalProps> = () => {
     }
   };
 
+  const handleSetDataLoading = () => {
+    if (sendDataLoading) {
+      return (
+        textLang.sendingDataLoading
+      )
+    } else {
+      return;
+    }
+  }
+
   const sendData = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!userData.trim()) {
-      alert('Пожалуйста, заполните поле!');
+      alert(textLang.noTextMessage);
       return;
     }
 
     try {
+      dispatch(onSetDataLoading());
+
       const response = await fetch("https://aleksey-api.onrender.com/getData", {
         method: 'POST',
         headers: {
@@ -34,14 +63,17 @@ const Modal: React.FC<ModalProps> = () => {
       });
 
       if (!response.ok) {
-        alert('Ошибка при отправке данных');
+        alert('Error');
+        dispatch(onSetDataLoading());
         return;
       } else {
-        alert('Данные отправлены');
+        alert(textLang.alertTextSuccess);
+        dispatch(onSetDataLoading());
       }
     } catch (err) {
       console.log(err);
-      alert('Ошибка сети или сервера');
+      alert(textLang.alertTextFail);
+      dispatch(onSetDataLoading());
     }
   } 
 
@@ -50,18 +82,19 @@ const Modal: React.FC<ModalProps> = () => {
     <div className="modalValue">
       <form className="form" onSubmit={sendData}>
         <label className="textToUser"><span className="normalTextToUser">
-          Напишите мне чтобы мы смогли договорится о вашем заказе</span> 
+          {textLang.modalText1}</span> 
         <br/><span className="smallTextToUser">
-          Обязательно укажите свой ник в дискорде или телеграме</span></label>
-          <label className="textToUserToHelp" htmlFor="">Если не получается отправить здесь то напишите мне ваш заказ в телеграме - @Aleksey_kuznez</label>
+          {textLang.modalText2}</span></label>
+          <label className="textToUserToHelp" htmlFor="">{textLang.modalText3}</label>
         <textarea
           className="textForEmail"
           name="username"
-          placeholder="текст..."
+          placeholder={textLang.inputText}
           onChange={(e) => dispatch(setUserData(e.target.value))}
         />
+        <div className="dataLoadingText">{handleSetDataLoading()}</div>
         <button className="btnSubmit" type="submit">
-          Отправить
+        {textLang.submitText}
         </button>
       </form>
     </div>

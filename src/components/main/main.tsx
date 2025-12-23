@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import './main.css';
 import { onOpenAutorModal } from "../reduser/reduser";
-import { AppDispatch } from "../store/store";
-import { useDispatch } from "react-redux";
+import { RootState, AppDispatch } from "../store/store";
+import { useSelector, useDispatch } from "react-redux";
 
 interface MainProps {} 
 
 const Main: React.FC<MainProps> = () => {
   const dispatch = useDispatch<AppDispatch>();
+
+  const textLang = useSelector((state: RootState) => state.aleksey.textLang);
 
   useEffect(() => {
     const slider = document.querySelector('.slider') as HTMLDivElement | null;
@@ -20,17 +22,29 @@ const Main: React.FC<MainProps> = () => {
     const purpleBlocks1 = document.querySelector('.purpleBlocks1') as HTMLDivElement;
     const purpleBlocks2 = document.querySelector('.purpleBlocks2') as HTMLDivElement;
     
-    function createBlock1(blockName: string): HTMLDivElement {
+    function createBlock1(): HTMLDivElement {
       const block = document.createElement('div');
-      block.classList.add(blockName);
+      
+      block.classList.add('purpleBlock');
+
+      const variable = Math.random() < 0.5 ? 0 : 1;
+
+      block.textContent = variable.toString();
+
       purpleBlocks1.append(block);
       block.style.willChange = 'transform';
       return block;
     }
 
-    function createBlock2(blockName: string): HTMLDivElement {
+    function createBlock2(): HTMLDivElement {
       const block = document.createElement('div');
-      block.classList.add(blockName);
+
+      block.classList.add('purpleBlock');
+
+      const variable = Math.random() < 0.5 ? 0 : 1;
+
+      block.textContent = variable.toString();
+
       purpleBlocks2.append(block);
       block.style.willChange = 'transform';
       return block;
@@ -42,12 +56,12 @@ const Main: React.FC<MainProps> = () => {
 
     function animation() {
       if (windowWidth > 800 && !isMobileDevice) {
-        const block1 = createBlock1('purpleBlock');
-        const block2 = createBlock1('purpleBlock');
-        const block3 = createBlock1('purpleBlock');
-        const block4 = createBlock2('purpleBlock');
-        const block5 = createBlock2('purpleBlock');
-        const block6 = createBlock2('purpleBlock');
+        const block1 = createBlock1();
+        const block2 = createBlock1();
+        const block3 = createBlock1();
+        const block4 = createBlock2();
+        const block5 = createBlock2();
+        const block6 = createBlock2();
     
         interface Blocks {
           element: HTMLDivElement;
@@ -123,14 +137,14 @@ const Main: React.FC<MainProps> = () => {
     
         animate();
       } else {
-        const block1 = createBlock1('purpleBlock');
-        const block2 = createBlock1('purpleBlock');
-        const block3 = createBlock1('purpleBlock');
-        const block4 = createBlock1('purpleBlock');
-        const block5 = createBlock2('purpleBlock');
-        const block6 = createBlock2('purpleBlock');
-        const block7 = createBlock2('purpleBlock');
-        const block8 = createBlock2('purpleBlock');
+        const block1 = createBlock1();
+        const block2 = createBlock1();
+        const block3 = createBlock1();
+        const block4 = createBlock1();
+        const block5 = createBlock2();
+        const block6 = createBlock2();
+        const block7 = createBlock2();
+        const block8 = createBlock2();
     
         interface Blocks {
           element: HTMLDivElement;
@@ -272,23 +286,18 @@ const Main: React.FC<MainProps> = () => {
           <div className="aboutAutor">
             <div className="autorDescription">
               <div className="title">
-                Обо мне
+                {textLang.aboutAutorTitle}
               </div>
               <div className="description">
-                Меня зовут Алексей, я опытный фулстек-разработчик. За моими плечами 
-                разработка множества веб-сайтов различной сложности.
-              Мои навыки вы можете посмотреть ниже, скоро я смогу добавить еще 
-              несколько. На данный момент ищу работу в айти сфере, а пока ищу готов 
-              использовать свои навыки чтобы создать вам качественный сайт-визитку или 
-              даже целое приложение(все подробности ниже).
+                {textLang.aboutAutorText}
               </div>
             </div>
             <div className="slider">
               <div className="titleAboutSlider">
-                Мой стек <span className="counter"></span><span className="counterGlobal"></span>
+                {textLang.slidertitle} <span className="counter"></span><span className="counterGlobal"></span>
               </div>
               <div className="next">
-                A
+                +
               </div>
               <div className="containerOfSlides">
                 <div className="slide">
@@ -325,48 +334,48 @@ const Main: React.FC<MainProps> = () => {
                 </div>
               </div>
               <div className="back">
-                A
+                -
               </div>
             </div>
           </div>
           <div className="frilance">
             <div className="frilanceTitle">
               <div className="frTitle">
-                Вы можете заказать у меня создание простого или сложного сайта за цену указаную ниже.
+                {textLang.frilanceTitle}
               </div>
             </div>
             <div className="aboutTrade">
               <div className="trade1">
-                <div className="titleOfTrade">Сайт-визитка</div>
+                <div className="titleOfTrade">{textLang.tradeTitle1}</div>
                 <div className="descriptionOfTrade">
-                  Хочешь стильный и лаконичный сайт, который будет выглядеть круто и работать быстро? Сделаю для тебя сайт, в котором будет только самое необходимое: информация о тебе, твои контакты и примеры работ (если есть). Никаких лишних деталей, только чистый дизайн и удобство для посетителей.
+                  {textLang.tradeDescription1}
                 </div>
                 <div className="price">
-                  <p>1500 руб.</p>
+                  <p>{textLang.price1}</p>
                 </div>
               </div>
               <div className="trade2">
-                <div className="titleOfTrade">Веб-проект</div>
+                <div className="titleOfTrade">{textLang.tradeTitle2}</div>
                 <div className="description">
                   <div className="descriptionOfTrade">
-                    Хочешь не просто сайт-визитку, а целый онлайн-мир? Сделаю для тебя расширенный многостраничный сайт с индивидуальным дизайном, где ты сможешь создать всё, что угодно: блог, портфолио, сайт для своей команды или даже интерактивное приложение с разными разделами и возможностями.
+                    {textLang.tradeDescription2}
                   </div>
                 </div>
                 <div className="price">
-                  <p>3000 руб.</p>
+                  <p>{textLang.price2}</p>
                 </div>
               </div>
             </div>
             <div className="meetAutor">
               <div>
-                <button className="meetAutorBtn" onClick={handleOpenModal}>Связатся с автором</button>
+                <button className="meetAutorBtn" onClick={handleOpenModal}>{textLang.meetWithAutorText}</button>
               </div>
             </div>
             </div>
             <div className="portfolio">
               <div className="portfolioTitle">
               <div className="prtTitle">
-                А здесь представлены некоторые из моих работ.
+                {textLang.portfolioTitle}
               </div>
               </div>
               <div className="portfolioWorks">

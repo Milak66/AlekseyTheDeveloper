@@ -1,0 +1,137 @@
+.intro {
+    height: 70vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/890adeadd46171063ea9db7286643502.jpg);
+}
+
+.introGretting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 5vw;
+}
+
+.autorName {
+    position: absolute;
+    z-index: 10;
+}
+
+.nameText {
+    font-size: 2.5vw;
+    text-align: center;
+    color: rgb(150, 0, 150);
+    width: 25vw;
+}
+
+.introAnimation {
+    position: relative; 
+    width: 50vw; 
+    height: 50vw; 
+    border-radius: 50%; 
+}
+
+.codeBlock {
+    display: flex;
+    width: 3vw;
+    height: 3vw;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    font-size: 2vw;
+    color: rgb(150, 0, 150);
+    border: 1px rgb(150, 0, 150) solid;
+    box-shadow: 0 0 2px rgb(150, 0, 150),
+        0 0 4px rgb(150, 0, 150),
+        0 -2px 4px rgb(150, 0, 150),
+        2px -4px 6px rgb(150, 0, 150),
+        2px -8px 18px rgb(150, 0, 150);
+}
+
+.introAnimation .codeBlock:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-20vw);
+}
+
+.introAnimation .codeBlock:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(60deg) translateY(-20vw);
+}
+
+.introAnimation .codeBlock:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(120deg) translateY(-20vw);
+}
+
+.introAnimation .codeBlock:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(180deg) translateY(-20vw);
+}
+
+.introAnimation .codeBlock:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(240deg) translateY(-20vw);
+}
+
+.introAnimation .codeBlock:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(300deg) translateY(-20vw);
+}
+
+@media all and (max-width: 768px) {
+
+    .intro {
+        height: 200vw;
+    }
+
+    .introGretting {
+        position: relative;
+        top: 50vw;
+    }
+    
+    .nameText {
+        font-size: 5vw;
+        text-align: center;
+        color: rgb(150, 0, 150);
+        width: 50vw;
+    }
+    
+    .introAnimation {
+        width: 60vw; 
+        height: 60vw;
+    }
+    
+    .codeBlock {
+        width: 4vw;
+        height: 4vw;
+        font-size: 3vw;
+    }
+    
+    .introAnimation .stonePlace:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-30vw);
+    }
+    
+    .introAnimation .stonePlace:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(60deg) translateY(-30vw);
+    }
+    
+    .introAnimation .stonePlace:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(120deg) translateY(-30vw);
+    }
+    
+    .introAnimation .stonePlace:nth-child(4) {
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-30vw);
+    }
+    
+    .introAnimation .stonePlace:nth-child(5) {
+        transform: translate(-50%, -50%) rotate(240deg) translateY(-30vw);
+    }
+    
+    .introAnimation .stonePlace:nth-child(6) {
+        transform: translate(-50%, -50%) rotate(300deg) translateY(-30vw);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .intro {
+        height: 100vw;
+    }
+} 

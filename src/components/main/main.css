@@ -1,9 +1,11 @@
 .main {
     display: flex;
     justify-content: space-between;
+    margin-top: 10vw;
 }
 
 .content {
+    position: relative; 
     width: 80%;
     background-color: rgb(234, 234, 234);
     border-radius: 2vw;
@@ -28,15 +30,24 @@
 }
 
 .purpleBlock {
+    display: flex;
     width: 3vw;
     height: 3vw;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    border: 1px rgb(176, 6, 243) solid;
-    box-shadow: 0 0 2px rgb(176, 6, 243),
-        0 0 4px rgb(176, 6, 243),
-        0 -2px 4px rgb(176, 6, 243),
-        2px -4px 6px rgb(176, 6, 243),
-        2px -8px 18px rgb(176, 6, 243);
+    font-size: 2vw;
+    color: rgb(150, 0, 150);
+    border: 1px rgb(150, 0, 150) solid;
+    box-shadow: 0 0 2px rgb(150, 0, 150),
+        0 0 4px rgb(150, 0, 150),
+        0 -2px 4px rgb(150, 0, 150),
+        2px -4px 6px rgb(150, 0, 150),
+        2px -8px 18px rgb(150, 0, 150);
+}
+
+.infinityPic {
+    width: 100%;
 }
 
 .aboutAutor {
@@ -53,7 +64,7 @@
     height: 25vw;
     flex-direction: column;
     align-items: center;
-    border: 1px rgb(176, 6, 243) solid;
+    border: 1.5px rgb(150, 0, 150) solid;
     border-radius: 2vw;
     justify-content: space-evenly;
     box-sizing: border-box;
@@ -63,12 +74,13 @@
 .title {
     font-size: 2vw;
     text-align: center;
+    color: rgb(150, 0, 150);
 }
 
 .description {
-    font-size: 1.4vw;
-    margin-left: 5px;
-    margin-right: 5px;
+    font-size: 1.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
     text-align: center;
 }
 
@@ -79,7 +91,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px rgb(176, 6, 243) solid;
+    border: 1.5px rgb(150, 0, 150) solid;
     border-radius: 2vw;
     background-color: rgb(234, 234, 234);
 }
@@ -88,6 +100,7 @@
     font-size: 2vw;
     padding: 10px;
     text-align: center;
+    color: rgb(150, 0, 150);
 }
 
 .containerOfSlides {
@@ -112,9 +125,13 @@
 
 .next {
     font-size: 2vw;
-    color: rgb(176, 6, 243);
-    padding: 0.7vw;
-    border: 1px rgb(176, 6, 243) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(150, 0, 150);
+    width: 3vw;
+    height: 5vw;
+    border: 1.5px rgb(150, 0, 150) solid;
     cursor: pointer;
     margin: 1vw;
     border-radius: 1vw;
@@ -122,10 +139,14 @@
 
 .back {
     font-size: 2vw;
-    color: rgb(176, 6, 243);
-    padding: 0.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(150, 0, 150);
+    width: 3vw;
+    height: 5vw;
     transform: rotate(180deg);
-    border: 1px rgb(176, 6, 243) solid;
+    border: 1.5px rgb(150, 0, 150) solid;
     cursor: pointer;
     margin: 1vw;
     border-radius: 1vw;
@@ -146,7 +167,7 @@
 
 .frTitle {
     font-size: 1.5vw;
-    border: 1px rgb(176, 6, 243) solid;
+    border: 1.5px rgb(150, 0, 150) solid;
     padding: 1.3vw;
     border-radius: 2vw;
     text-align: center;
@@ -161,7 +182,7 @@
 
 .trade1 {
     width: 26vw;
-    border: 1px rgb(176, 6, 243) solid;
+    border: 1.5px rgb(150, 0, 150) solid;
     border-radius: 2vw;
     background-color: rgb(234, 234, 234);
 }
@@ -169,7 +190,7 @@
 .trade2 {
     width: 26vw;
     border-radius: 2vw;
-    border: 1px rgb(176, 6, 243) solid;
+    border: 1.5px rgb(150, 0, 150) solid;
     background-color: rgb(234, 234, 234);
 }
 
@@ -179,6 +200,7 @@
     justify-content: center;
     text-align: center;
     padding: 2vw;
+    color: rgb(150, 0, 150);
 }
 
 .descriptionOfTrade {
@@ -192,6 +214,7 @@
     font-size: 1.4vw;
     justify-content: center;
     align-items: center;
+    color: green;
 }
 
 .meetAutor {
@@ -201,10 +224,11 @@
 
 .meetAutorBtn {
     padding: 1.3vw;
+    color: black;
     border-radius: 2vw;
     font-size: 1.5vw;
+    background-color:rgb(150, 0, 150);
     border: none;
-    background: linear-gradient(to right, rgb(176, 6, 243), rgb(166, 0, 166));
     cursor: pointer;
 }
 
@@ -215,7 +239,7 @@
 
 .portfolio {
     height: 40vw;
-    margin-top: 50px;
+    margin-top: 10vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -229,7 +253,7 @@
 
 .prtTitle {
     font-size: 1.5vw;
-    border: 1px rgb(176, 6, 243) solid;
+    border: 1.5px rgb(150, 0, 150) solid;
     padding: 1.3vw;
     border-radius: 2vw;
     text-align: center;
@@ -260,6 +284,7 @@
     padding: 1vw;
     font-size: 1.7vw;
     text-align: center;
+    color: rgb(150, 0, 150);
 }
 
 .workContent1 {
@@ -280,17 +305,39 @@
 
 @media all and (max-width: 768px) {
 
+    .main {
+        margin-top: 0;
+    }
+
     .content {
         background-color: transparent; 
         border-radius: 4vw;
+    }
+
+    .purpleBlock {
+        width: 5vw;
+        height: 5vw;
+        font-size: 4vw;
+    }
+
+    .infinityPic {
+        width: 100%;
+    }
+
+    .purpleBlocks1 {
+        align-items: flex-end;
+    }
+    
+    .purpleBlocks2 {
+        align-items: flex-start;
     }
 
     .aboutAutor {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        height: 110vw;
-        margin-top: 20vw;
+        height: 120vw;
+        margin-top: 25vw;
     }
     
     .autorDescription {
@@ -304,9 +351,9 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        background-color: transparent; 
         border: none;
         border-radius: 5vw;
-        background-color: transparent; 
     }
     
     .containerOfSlides {
@@ -316,8 +363,8 @@
     }
     
     .slide {
-        width: 35vw;
-        height: 20vw;
+        width: 50vw;
+        height: 30vw;
     }
 
     .photo {
@@ -325,52 +372,48 @@
     }
 
     .next {
-        font-size: 6vw;
-        color: rgb(176, 6, 243);
-        padding: 1.5vw;
-        border: 1px rgb(176, 6, 243) solid;
+        font-size: 8vw;
+        color: rgb(150, 0, 150);
+        padding: 3vw;
+        border: 0.2vw rgb(150, 0, 150) solid;
         cursor: pointer;
-        margin: 1.5vw;
+        margin: 3vw;
         border-radius: 2vw;
     }
     
     .back {
-        font-size: 6vw;
-        color: rgb(176, 6, 243);
-        padding: 1.5vw;
+        font-size: 8vw;
+        color: rgb(150, 0, 150);
+        padding: 3vw;
         transform: rotate(180deg);
-        border: 1px rgb(176, 6, 243) solid;
+        border: 0.2vw rgb(150, 0, 150) solid;
         cursor: pointer;
-        margin: 1.5vw;
+        margin: 3vw;
         border-radius: 2vw;
-    }
-
-    .purpleBlock {
-        width: 5vw;
-        height: 5vw;
     }
     
     .title {
-        font-size: 4vw;
+        font-size: 5vw;
         margin-top: 2vw;
     }
     
     .description {
-        font-size: 3vw;
+        font-size: 3.5vw;
         padding: 1vw;
     }
     
     .titleAboutSlider {
-        font-size: 4vw;
+        font-size: 5vw;
+        width: 30vw;
     }
     
     .frilance {
-        height: 180vw;
-        margin-top: 35vw;
+        height: 230vw;
+        margin-top: 50vw;
     }
     
     .frTitle {
-        font-size: 3vw;
+        font-size: 3.5vw;
         padding: 1vw;
         border-radius: 4vw;
     }
@@ -380,7 +423,7 @@
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
-        height: 130vw;
+        height: 160vw;
     }
     
     .trade1,
@@ -391,26 +434,27 @@
     
     .titleOfTrade {
         padding: 3vw;
-        font-size: 4vw;
+        font-size: 5vw;
     }
     
     .descriptionOfTrade {
-        font-size: 3vw;
+        font-size: 3.5vw;
         padding: 1.5vw;
     }
 
     .price {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .meetAutorBtn {
-        font-size: 3vw;
-        padding: 2.5vw;
-        border-radius: 3vw;
+        font-size: 5vw;
+        padding: 3vw;
+        border-radius: 4vw;
     }
 
     .portfolio {
-        height: 70vw;
+        height: 80vw;
+        margin-top: 20vw;
     }
     
     .work {
@@ -418,12 +462,12 @@
     }
     
     .prtTitle {
-        font-size: 3vw;
+        font-size: 3.5vw;
         padding: 2.5vw;
         border-radius: 4vw;
     }
     
     .workTitle {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 }

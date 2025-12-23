@@ -1,6 +1,7 @@
 import React from "react";
 import './app.css';
 import { useEffect } from "react";
+import Intro from "../intro/intro";
 import Start from "../start/start";
 import Main from "../main/main";
 import Modal from "../modal/modal";
@@ -20,7 +21,9 @@ const App: React.FC<AppProps> = (): React.JSX.Element => {
     const dispatch = useDispatch<AppDispatch>();
 
     useEffect(() => {
-        dispatch(setLoading())
+        setTimeout(() => {
+            dispatch(setLoading());
+        }, 2000);
     }, []);
 
     const showSite = (): React.JSX.Element => {
@@ -31,8 +34,9 @@ const App: React.FC<AppProps> = (): React.JSX.Element => {
         } else {
             return (
                 <div className="app">
-                    {openAutorModal ? <Modal/> : null}
                     <Start/> 
+                    <Intro/>
+                    {openAutorModal ? <Modal/> : null}
                     <Main/>
                 </div>
             )
