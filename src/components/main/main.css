@@ -38,12 +38,7 @@
     position: relative;
     font-size: 2vw;
     color: rgb(150, 0, 150);
-    border: 1px rgb(150, 0, 150) solid;
-    box-shadow: 0 0 2px rgb(150, 0, 150),
-        0 0 4px rgb(150, 0, 150),
-        0 -2px 4px rgb(150, 0, 150),
-        2px -4px 6px rgb(150, 0, 150),
-        2px -8px 18px rgb(150, 0, 150);
+    border: 1.5px rgb(150, 0, 150) solid;
 }
 
 .infinityPic {

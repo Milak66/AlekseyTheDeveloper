@@ -44,36 +44,31 @@
     transform-origin: center;
     font-size: 2vw;
     color: rgb(150, 0, 150);
-    border: 1px rgb(150, 0, 150) solid;
-    box-shadow: 0 0 2px rgb(150, 0, 150),
-        0 0 4px rgb(150, 0, 150),
-        0 -2px 4px rgb(150, 0, 150),
-        2px -4px 6px rgb(150, 0, 150),
-        2px -8px 18px rgb(150, 0, 150);
+    border: 1.5px rgb(150, 0, 150) solid;
 }
 
 .introAnimation .codeBlock:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-20vw);
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-30vw);
 }
 
 .introAnimation .codeBlock:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(60deg) translateY(-20vw);
+    transform: translate(-50%, -50%) rotate(60deg) translateY(-30vw);
 }
 
 .introAnimation .codeBlock:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(120deg) translateY(-20vw);
+    transform: translate(-50%, -50%) rotate(120deg) translateY(-30vw);
 }
 
 .introAnimation .codeBlock:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(180deg) translateY(-20vw);
+    transform: translate(-50%, -50%) rotate(180deg) translateY(-30vw);
 }
 
 .introAnimation .codeBlock:nth-child(5) {
-    transform: translate(-50%, -50%) rotate(240deg) translateY(-20vw);
+    transform: translate(-50%, -50%) rotate(240deg) translateY(-30vw);
 }
 
 .introAnimation .codeBlock:nth-child(6) {
-    transform: translate(-50%, -50%) rotate(300deg) translateY(-20vw);
+    transform: translate(-50%, -50%) rotate(300deg) translateY(-30vw);
 }
 
 @media all and (max-width: 768px) {
@@ -100,9 +95,9 @@
     }
     
     .codeBlock {
-        width: 4vw;
-        height: 4vw;
-        font-size: 3vw;
+        width: 5vw;
+        height: 5vw;
+        font-size: 4vw;
     }
     
     .introAnimation .stonePlace:nth-child(1) {
