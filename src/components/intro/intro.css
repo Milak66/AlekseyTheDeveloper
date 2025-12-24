@@ -48,27 +48,27 @@
 }
 
 .introAnimation .codeBlock:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-30vw);
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-20vw);
 }
 
 .introAnimation .codeBlock:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(60deg) translateY(-30vw);
+    transform: translate(-50%, -50%) rotate(60deg) translateY(-20vw);
 }
 
 .introAnimation .codeBlock:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(120deg) translateY(-30vw);
+    transform: translate(-50%, -50%) rotate(120deg) translateY(-20vw);
 }
 
 .introAnimation .codeBlock:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(180deg) translateY(-30vw);
+    transform: translate(-50%, -50%) rotate(180deg) translateY(-20vw);
 }
 
 .introAnimation .codeBlock:nth-child(5) {
-    transform: translate(-50%, -50%) rotate(240deg) translateY(-30vw);
+    transform: translate(-50%, -50%) rotate(240deg) translateY(-20vw);
 }
 
 .introAnimation .codeBlock:nth-child(6) {
-    transform: translate(-50%, -50%) rotate(300deg) translateY(-30vw);
+    transform: translate(-50%, -50%) rotate(300deg) translateY(-20vw);
 }
 
 @media all and (max-width: 768px) {
@@ -100,27 +100,27 @@
         font-size: 4vw;
     }
     
-    .introAnimation .stonePlace:nth-child(1) {
+    .introAnimation .codeBlock:nth-child(1) {
         transform: translate(-50%, -50%) rotate(0deg) translateY(-30vw);
     }
     
-    .introAnimation .stonePlace:nth-child(2) {
+    .introAnimation .codeBlock:nth-child(2) {
         transform: translate(-50%, -50%) rotate(60deg) translateY(-30vw);
     }
     
-    .introAnimation .stonePlace:nth-child(3) {
+    .introAnimation .codeBlock:nth-child(3) {
         transform: translate(-50%, -50%) rotate(120deg) translateY(-30vw);
     }
     
-    .introAnimation .stonePlace:nth-child(4) {
+    .introAnimation .codeBlock:nth-child(4) {
         transform: translate(-50%, -50%) rotate(180deg) translateY(-30vw);
     }
     
-    .introAnimation .stonePlace:nth-child(5) {
+    .introAnimation .codeBlock:nth-child(5) {
         transform: translate(-50%, -50%) rotate(240deg) translateY(-30vw);
     }
     
-    .introAnimation .stonePlace:nth-child(6) {
+    .introAnimation .codeBlock:nth-child(6) {
         transform: translate(-50%, -50%) rotate(300deg) translateY(-30vw);
     }
 }
