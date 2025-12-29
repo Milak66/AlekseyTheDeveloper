@@ -23,20 +23,21 @@ const App: React.FC<AppProps> = (): React.JSX.Element => {
     const dispatch = useDispatch<AppDispatch>();
 
     useEffect(() => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             dispatch(setLoading(false));
         }, 2000);
-        
-            if (openAutorModal || openImgModal) {
-                document.body.style.overflow = "hidden";
-              } else {
-                document.body.style.overflow = "";
-              }
-          
-              return () => {
-                document.body.style.overflow = "";
-              };
-    }, [openAutorModal, openImgModal]);
+    
+        if (openAutorModal || openImgModal) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    
+        return () => {
+            clearTimeout(timer);
+            document.body.style.overflow = "";
+        };
+    }, []);
 
     const showSite = (): React.JSX.Element => {
         if (loading) {
