@@ -23,9 +23,9 @@ const App: React.FC<AppProps> = (): React.JSX.Element => {
     const dispatch = useDispatch<AppDispatch>();
 
     useEffect(() => {
-        // setTimeout(() => {
+        setTimeout(() => {
             dispatch(setLoading(false));
-        // }, 2000);
+        }, 2000);
         
             if (openAutorModal || openImgModal) {
                 document.body.style.overflow = "hidden";
