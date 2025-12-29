@@ -11,6 +11,8 @@ interface InitialState {
     openLangModal: boolean,
     openMenuModal: boolean;
     openAutorModal: boolean;
+    openImgModal: boolean;
+    imgUrl: string;
     userData: string;
     sendDataLoading: boolean;
 }
@@ -22,6 +24,8 @@ const initialState: InitialState = {
     openLangModal: false,
     openMenuModal: false,
     openAutorModal: false,
+    openImgModal: false,
+    imgUrl: '',
     userData: '',
     sendDataLoading: false
 }
@@ -30,8 +34,8 @@ const alekseyReducer = createSlice({
     name: 'reduser',
     initialState,
     reducers: {
-     setLoading: (state) => {
-        state.loading = !state.loading;
+     setLoading: (state, action: PayloadAction<boolean>) => {
+        state.loading = action.payload;
      },
      changeLang: (state, action: PayloadAction<'rus' | 'eng'>) => {
       if (action.payload === 'rus') {
@@ -56,6 +60,12 @@ const alekseyReducer = createSlice({
      onOpenAutorModal: (state) => {
         state.openAutorModal = !state.openAutorModal;
      },
+     onOpenImgModal: (state) => {
+      state.openImgModal = !state.openImgModal;
+     },
+     onWriteImgUrl: (state, action: PayloadAction<string>) => {
+      state.imgUrl = action.payload;
+     },
      setUserData: (state, action: PayloadAction<string>) => {
         state.userData = action.payload;
      },
@@ -73,6 +83,8 @@ export const {
    onOpenLangModal,
    onOpenMenuModal,
    onOpenAutorModal,
+   onOpenImgModal,
+   onWriteImgUrl,
    setUserData,
    onSetDataLoading
 } = alekseyReducer.actions;

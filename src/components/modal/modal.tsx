@@ -1,6 +1,5 @@
 import React from "react";
 import './modal.css';
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { onOpenAutorModal, setUserData, onSetDataLoading } from "../reduser/reduser";
@@ -11,21 +10,7 @@ const Modal: React.FC<ModalProps> = () => {
   const textLang = useSelector((state: RootState) => state.aleksey.textLang); 
   const dispatch = useDispatch(); 
   const userData = useSelector((state: RootState) => state.aleksey.userData);
-  const openAutorModal = useSelector((state: RootState) => state.aleksey.openAutorModal);
   const sendDataLoading = useSelector((state: RootState) => state.aleksey.sendDataLoading);
-
-  useEffect(() => {
-
-    if (openAutorModal) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [openAutorModal]);
 
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {

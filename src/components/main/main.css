@@ -232,8 +232,31 @@
     z-index: 2;
 }
 
+.imgModalPlace {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.imgModal {
+    width: 75vw;
+    height: 45vw;
+}
+
+.imgModalPic {
+    width: 100%;
+    height: 100%;
+}
+
 .portfolio {
-    height: 40vw;
+    height: 60vw;
     margin-top: 10vw;
     display: flex;
     flex-direction: column;
@@ -253,6 +276,23 @@
     border-radius: 2vw;
     text-align: center;
     background-color: rgb(234, 234, 234);
+}
+
+.portfolioPlainWorks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.plainWork {
+    width: 20vw;
+    height: 13vw;
+    cursor: pointer;
+    border: 1.5px rgb(150, 0, 150) solid;
+}
+
+.plainImg {
+    width: 100%;
+    height: 100%;
 }
 
 .portfolioWorks {
@@ -450,6 +490,11 @@
     .portfolio {
         height: 80vw;
         margin-top: 20vw;
+    }
+    
+    .plainWork {
+        width: 20vw;
+        height: 13vw;
     }
     
     .work {

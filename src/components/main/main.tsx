@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import './main.css';
-import { onOpenAutorModal } from "../reduser/reduser";
+import { onOpenAutorModal, onOpenImgModal, onWriteImgUrl} from "../reduser/reduser";
 import { RootState, AppDispatch } from "../store/store";
 import { useSelector, useDispatch } from "react-redux";
+import plainWork1 from '../../assets/plainWork1.png';
+import plainWork2 from '../../assets/plainWork2.png';
+import plainWork3 from '../../assets/plainWork3.png';
 
 interface MainProps {} 
 
@@ -10,6 +13,10 @@ const Main: React.FC<MainProps> = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const textLang = useSelector((state: RootState) => state.aleksey.textLang);
+
+  const openImgModal = useSelector((state: RootState) => state.aleksey.openImgModal);
+
+  const imgUrl = useSelector((state: RootState) => state.aleksey.imgUrl);
 
   useEffect(() => {
     const slider = document.querySelector('.slider') as HTMLDivElement | null;
@@ -56,6 +63,9 @@ const Main: React.FC<MainProps> = () => {
 
     function animation() {
       if (windowWidth > 800 && !isMobileDevice) {
+        purpleBlocks1.innerHTML = '';
+        purpleBlocks2.innerHTML = '';
+    
         const block1 = createBlock1();
         const block2 = createBlock1();
         const block3 = createBlock1();
@@ -137,6 +147,9 @@ const Main: React.FC<MainProps> = () => {
     
         animate();
       } else {
+        purpleBlocks1.innerHTML = '';
+        purpleBlocks2.innerHTML = '';
+    
         const block1 = createBlock1();
         const block2 = createBlock1();
         const block3 = createBlock1();
@@ -278,6 +291,33 @@ const Main: React.FC<MainProps> = () => {
     dispatch(onOpenAutorModal());
   }
 
+  function handleOpenImgModal() {
+    dispatch(onOpenImgModal());
+  }
+
+  function handleCloseImgModal(e: React.MouseEvent<HTMLDivElement>) {
+    if (e.target === e.currentTarget) {
+      dispatch(onOpenImgModal());
+    }
+  }
+
+  interface ImgProps {};
+
+  const ImgModal: React.FC<ImgProps> = () => {
+
+    return (
+      <div className="imgModalPlace" onClick={handleCloseImgModal}>
+        <div className="imgModal">
+          <img className="imgModalPic" src={imgUrl} alt="" />
+        </div>
+      </div>
+    )
+  }
+
+  function handleWriteImgUrl(img: string) {
+    dispatch(onWriteImgUrl(img))
+  }
+  
   return (
     <div className="main">
       <div className="purpleBlocks1">
@@ -373,10 +413,31 @@ const Main: React.FC<MainProps> = () => {
             </div>
             </div>
             <div className="portfolio">
+            {openImgModal && <ImgModal/>}
               <div className="portfolioTitle">
               <div className="prtTitle">
                 {textLang.portfolioTitle}
               </div>
+              </div>
+              <div className="portfolioPlainWorks">
+                <div className="plainWork" onClick={() => {
+                  handleOpenImgModal();
+                  handleWriteImgUrl(plainWork1);
+                  }}>
+                  <img className="plainImg" src={plainWork1} alt="" />
+                </div>
+                <div className="plainWork" onClick={() => {
+                  handleOpenImgModal();
+                  handleWriteImgUrl(plainWork2);
+                  }}>
+                  <img className="plainImg" src={plainWork2} alt="" />
+                </div>
+                <div className="plainWork" onClick={() => {
+                  handleOpenImgModal();
+                  handleWriteImgUrl(plainWork3);
+                  }}>
+                  <img className="plainImg" src={plainWork3} alt="" />
+                </div>
               </div>
               <div className="portfolioWorks">
                 <div className="work">
