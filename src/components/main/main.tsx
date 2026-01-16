@@ -6,6 +6,14 @@ import { useSelector, useDispatch } from "react-redux";
 import plainWork1 from '../../assets/plainWork1.png';
 import plainWork2 from '../../assets/plainWork2.png';
 import plainWork3 from '../../assets/plainWork3.png';
+import htmlPic from '../../assets/html.png';
+import cssPic from '../../assets/css.png';
+import jsPic from '../../assets/js.png';
+import tsPic from '../../assets/ts.png';
+import reactPic from '../../assets/react.png';
+import reduxPic from '../../assets/redux.png';
+import nodeJsPic from '../../assets/nodeJs.png';
+import nextJsPic from '../../assets/nextJs.png';
 
 interface MainProps {} 
 
@@ -341,35 +349,35 @@ const Main: React.FC<MainProps> = () => {
               </div>
               <div className="containerOfSlides">
                 <div className="slide">
-                  <img className="photo" src="https://cdn.glitch.global/b10fa02e-f884-4559-ad0f-54ac66f86f79/thumbnails%2Fhtml.jpg?1731419769006"
+                  <img className="photo" src={htmlPic}
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src="https://cdn.glitch.global/b10fa02e-f884-4559-ad0f-54ac66f86f79/thumbnails%2Fcss.webp?1731419777973"
+                  <img className="photo" src={cssPic}
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src="https://cdn.glitch.global/b10fa02e-f884-4559-ad0f-54ac66f86f79/thumbnails%2Fjs.jpg?1731419784875"
+                  <img className="photo" src={jsPic}
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src="https://cdn.glitch.global/b10fa02e-f884-4559-ad0f-54ac66f86f79/thumbnails%2FTypeScript.webp?1742461420078"
+                  <img className="photo" src={tsPic}
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src="https://cdn.glitch.global/b10fa02e-f884-4559-ad0f-54ac66f86f79/thumbnails%2FReact.png?1735986150454"
+                  <img className="photo" src={reactPic}
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src="https://cdn.glitch.global/b10fa02e-f884-4559-ad0f-54ac66f86f79/thumbnails%2Fredux.webp?1744810757777"
+                  <img className="photo" src={reduxPic}
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src="https://avatars.mds.yandex.net/i?id=a72fc454e8c4fca86fd5b92f351ec25b8515d42b-16458733-images-thumbs&n=13"
+                  <img className="photo" src={nodeJsPic}
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src="https://dipstrategy.co.id/blog/wp-content/uploads/2024/05/nextjs.webp"
+                  <img className="photo" src={nextJsPic}
                     alt="" />
                 </div>
               </div>
