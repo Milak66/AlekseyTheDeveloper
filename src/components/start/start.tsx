@@ -13,8 +13,8 @@ const Start: React.FC<StartProps> = () => {
   const textLang = useSelector((state: RootState) => state.aleksey.textLang); 
   const openLangModal = useSelector((state: RootState) => state.aleksey.openLangModal); 
   const openMenuModal = useSelector((state: RootState) => state.aleksey.openMenuModal); 
-  const textA = 'Aleksey the developer';
-  const textB = '|';
+  const textA = "Alexi the developer";
+  const textB = "|";
   const speedGreeting = 100;
   const i = useRef(0);
   const showCursor = useRef(true);

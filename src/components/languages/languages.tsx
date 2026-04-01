@@ -2,7 +2,7 @@ import { RusText, EngText } from "./languagesInterfaces"
 
 const rusText: RusText = {
     loadingText: 'Загрузка...',
-    greeting: 'Добро пожаловть на Aleksey website!',
+    greeting: 'Добро пожаловть на Алекси website!',
     langRus: 'Русский',
     langEng: 'English',
     routesTitle: 'Разделы',
@@ -34,7 +34,7 @@ const rusText: RusText = {
 
 const engText: EngText = {
     loadingText: 'Loading...',
-    greeting: 'Welcome to Aleksey website!',
+    greeting: 'Welcome to Alexi website!',
     langRus: 'Русский',
     langEng: 'English',
     routesTitle: 'Sections',
@@ -43,7 +43,7 @@ const engText: EngText = {
     route3: 'Portfolio',
     aboutAutorTitle: 'About me',
     slidertitle: 'My stack',
-    aboutAutorText: "Hello there, my name is Aleksey, I'm 17 years old. I've been studying IT for several years, you can see my skill set here. I'm currently trying my hand at freelancing and can create a website for you at a reasonable price.",
+    aboutAutorText: "Hello there, my name is Alex, I'm 17 years old. I've been studying IT for several years, you can see my skill set here. I'm currently trying my hand at freelancing and can create a website for you at a reasonable price.",
     frilanceTitle: 'You can order me to create a simple site-card or a complex web project for the price listed below.',
     tradeTitle1: 'Site-card',
     tradeTitle2: 'Complex web project',
