@@ -2,7 +2,7 @@ import { RusText, EngText } from "./languagesInterfaces"
 
 const rusText: RusText = {
     loadingText: 'Загрузка...',
-    greeting: 'Добро пожаловть на Алекси website!',
+    greeting: 'Добро пожаловть на сайт!',
     langRus: 'Русский',
     langEng: 'English',
     routesTitle: 'Разделы',
@@ -34,7 +34,7 @@ const rusText: RusText = {
 
 const engText: EngText = {
     loadingText: 'Loading...',
-    greeting: 'Welcome to Alexi website!',
+    greeting: 'Welcome to the website!',
     langRus: 'Русский',
     langEng: 'English',
     routesTitle: 'Sections',
