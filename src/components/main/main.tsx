@@ -13,7 +13,7 @@ import tsPic from '../../assets/ts.png';
 import reactPic from '../../assets/react.png';
 import reduxPic from '../../assets/redux.png';
 import nodeJsPic from '../../assets/nodeJs.png';
-import nextJsPic from '../../assets/nextJs.png';
+import javaPic from '../../assets/java.jpg';
 
 interface MainProps {} 
 
@@ -377,7 +377,7 @@ const Main: React.FC<MainProps> = () => {
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src={nextJsPic}
+                  <img className="photo" src={javaPic}
                     alt="" />
                 </div>
               </div>

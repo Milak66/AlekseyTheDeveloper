@@ -36,6 +36,7 @@
     display: flex;
     width: 3vw;
     height: 3vw;
+    font-family: none;
     justify-content: center;
     align-items: center;
     position: absolute;
