@@ -10,7 +10,7 @@
     background-image: url(/src/assets/697b00d2b6bcf68cbb94f9da415dec98.jpg);
 }
 
-.dark_fun {
+.loading_block {
     display: flex;
     width: 7vw;
     height: 7vw;
@@ -34,7 +34,7 @@
         height: 100vh
     }
     
-    .dark_fun {
+    .loading_block {
         width: 14vw;
         height: 14vw;
         font-size: 10vw;

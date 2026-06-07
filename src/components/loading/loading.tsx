@@ -17,7 +17,7 @@ const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
 
     if (!dark_fun) return;
 
-    function darkEnergy() {
+    function loadingAnimation() {
       if (directionUp) {
         if (pos < 100) {
           pos += 2;
@@ -37,10 +37,10 @@ const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
       dark_fun!.style.transform = `rotate(${posAround}deg)`;
       dark_fun!.style.bottom = pos + 'px';
 
-      requestAnimationFrame(darkEnergy);
+      requestAnimationFrame(loadingAnimation);
     }
 
-    darkEnergy();
+    loadingAnimation();
 
     return () => {
     };
@@ -48,7 +48,7 @@ const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
 
   return (
     <div className="loading_place">
-      <div className="dark_fun" ref={darkFunRef}>1</div>
+      <div className="loading_block" ref={darkFunRef}>1</div>
       <div className="loadingText">{textLang.loadingText}</div>
     </div>
   );
