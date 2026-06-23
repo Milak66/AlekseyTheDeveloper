@@ -2,12 +2,13 @@ import React, { useRef, useEffect } from "react";
 import './loading.css';
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
+import alexi from '../../assets/alexi.png';
 
 interface LoadingProps {};
 
 const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
   const textLang = useSelector((state: RootState) => state.aleksey.textLang); 
-  const darkFunRef = useRef<HTMLDivElement>(null);
+  const darkFunRef = useRef<HTMLImageElement>(null);
   let pos = 1;
   let posAround = 1;
   let directionUp = true;
@@ -48,7 +49,7 @@ const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
 
   return (
     <div className="loading_place">
-      <div className="loading_block" ref={darkFunRef}>1</div>
+      <img className="alexiLoading" ref={darkFunRef} src={alexi} alt="" />
       <div className="loadingText">{textLang.loadingText}</div>
     </div>
   );

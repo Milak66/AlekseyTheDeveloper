@@ -10,17 +10,9 @@
     background-image: url(/src/assets/697b00d2b6bcf68cbb94f9da415dec98.jpg);
 }
 
-.loading_block {
-    display: flex;
-    width: 7vw;
-    height: 7vw;
-    font-family: none;
-    justify-content: center;
-    align-items: center;
+.alexiLoading {
+    width: 10vw;
     position: relative;
-    font-size: 5vw;
-    color: rgb(150, 0, 150);
-    border: 1.5px rgb(150, 0, 150) solid;
 }
 
 .loadingText {
@@ -34,10 +26,8 @@
         height: 100vh
     }
     
-    .loading_block {
-        width: 14vw;
-        height: 14vw;
-        font-size: 10vw;
+    .alexiLoading {
+        width: 25vw;
     }
 
     .loadingText {
