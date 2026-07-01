@@ -56,11 +56,11 @@ const Start: React.FC<StartProps> = () => {
         <div className="modalLang">
             <div className="language">
             <button className="langBtn" 
-            onClick={() => handleChangeLang('rus')}>{textLang.langRus}</button>
+            onClick={() => handleChangeLang('eng')}>{textLang.langEng}</button>
             </div>
             <div className="language">
             <button className="langBtn" 
-            onClick={() => handleChangeLang('eng')}>{textLang.langEng}</button>
+            onClick={() => handleChangeLang('rus')}>{textLang.langRus}</button>
             </div>
         </div>
     )
