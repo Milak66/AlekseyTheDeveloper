@@ -12,8 +12,8 @@ import jsPic from '../../assets/js.png';
 import tsPic from '../../assets/ts.png';
 import reactPic from '../../assets/react.png';
 import reduxPic from '../../assets/redux.png';
-import nodeJsPic from '../../assets/nodeJs.png';
 import javaPic from '../../assets/java.jpg';
+import springBoot from '../../assets/springBoot.png';
 
 interface MainProps {} 
 
@@ -373,7 +373,7 @@ const Main: React.FC<MainProps> = () => {
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src={nodeJsPic}
+                  <img className="photo" src={springBoot}
                     alt="" />
                 </div>
                 <div className="slide">
