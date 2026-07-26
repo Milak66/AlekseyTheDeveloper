@@ -373,11 +373,11 @@ const Main: React.FC<MainProps> = () => {
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src={springBoot}
+                  <img className="photo" src={javaPic}
                     alt="" />
                 </div>
                 <div className="slide">
-                  <img className="photo" src={javaPic}
+                  <img className="photo" src={springBoot}
                     alt="" />
                 </div>
               </div>
