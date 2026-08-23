@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import './loading.css';
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import alexi from '../../assets/alexi.png';
+import alexey from '../../assets/alexeyIcon.jpg';
 
 interface LoadingProps {};
 
@@ -49,7 +49,7 @@ const LoadingSite: React.FC<LoadingProps> = (): React.ReactNode => {
 
   return (
     <div className="loading_place">
-      <img className="alexiLoading" ref={darkFunRef} src={alexi} alt="" />
+      <img className="alexiLoading" ref={darkFunRef} src={alexey} alt="" />
       <div className="loadingText">{textLang.loadingText}</div>
     </div>
   );

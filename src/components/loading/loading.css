@@ -11,7 +11,7 @@
 }
 
 .alexiLoading {
-    width: 10vw;
+    width: 12vw;
     position: relative;
 }
 
@@ -27,7 +27,7 @@
     }
     
     .alexiLoading {
-        width: 25vw;
+        width: 30vw;
     }
 
     .loadingText {
