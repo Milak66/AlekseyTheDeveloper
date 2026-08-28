@@ -16,22 +16,30 @@
 }
 
 .loadingText {
-    font-size: 3vw;
+    font-size: 2.5vw;
     color: rgb(150, 0, 150);
 }
 
 @media all and (max-width: 768px) {
-
-    .loading_place {
-        height: 100vh
-    }
     
     .alexiLoading {
-        width: 30vw;
+        width: 35vw;
     }
 
     .loadingText {
-        font-size: 7vw;
+        font-size: 6vw;
+        color: rgb(150, 0, 150);
+    }
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    
+    .alexiLoading {
+        width: 15vw;
+    }
+
+    .loadingText {
+        font-size: 2.5vw;
         color: rgb(150, 0, 150);
     }
 }
