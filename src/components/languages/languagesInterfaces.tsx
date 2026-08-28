@@ -1,5 +1,6 @@
 interface RusText {
     loadingText: string;
+    openWebsite: string;
     greeting: string;
     langRus: string,
     langEng: string,
@@ -32,6 +33,7 @@ interface RusText {
 
 interface EngText {
     loadingText: string;
+    openWebsite: string;
     greeting: string;
     langRus: string,
     langEng: string,

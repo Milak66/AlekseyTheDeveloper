@@ -2,6 +2,7 @@ import { RusText, EngText } from "./languagesInterfaces"
 
 const rusText: RusText = {
     loadingText: 'Загрузка...',
+    openWebsite: "Открыть сайт ->",
     greeting: 'Добро пожаловть на сайт!',
     langRus: 'Русский',
     langEng: 'English',
@@ -34,6 +35,7 @@ const rusText: RusText = {
 
 const engText: EngText = {
     loadingText: 'Loading...',
+    openWebsite: "Open website ->",
     greeting: 'Welcome to the website!',
     langRus: 'Русский',
     langEng: 'English',

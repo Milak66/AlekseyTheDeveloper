@@ -1,14 +1,13 @@
 import React from "react";
 import './app.css';
 import { useEffect } from "react";
-import LoadingSite from "../loading/loading";
+import Loading from "../loading/loading";
 import Intro from "../intro/intro";
 import Start from "../start/start";
 import Main from "../main/main";
 import Modal from "../modal/modal";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState, AppDispatch } from "../store/store";
-import { setLoading } from "../reduser/reduser";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 interface AppProps {};
 
@@ -20,29 +19,19 @@ const App: React.FC<AppProps> = (): React.JSX.Element => {
 
     const openImgModal = useSelector((state: RootState) => state.aleksey.openImgModal);
 
-    const dispatch = useDispatch<AppDispatch>();
-
     useEffect(() => {
-        const timer = setTimeout(() => {
-            dispatch(setLoading(false));
-        }, 2000);
     
         if (openAutorModal || openImgModal) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "";
         }
-    
-        return () => {
-            clearTimeout(timer);
-            document.body.style.overflow = "";
-        };
     }, []);
 
     const showSite = (): React.JSX.Element => {
         if (loading) {
             return (
-            <LoadingSite/>
+            <Loading/>
             )
         } else {
             return (
