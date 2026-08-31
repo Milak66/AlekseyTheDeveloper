@@ -37,8 +37,11 @@
     align-items: center;
     position: relative;
     font-size: 2vw;
-    color: rgb(150, 0, 150);
-    border: 1.5px rgb(150, 0, 150) solid;
+    color: #b14cff;
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
+    border: 1.5px #b14cff solid;
 }
 
 .infinityPic {
@@ -59,7 +62,7 @@
     height: 25vw;
     flex-direction: column;
     align-items: center;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     border-radius: 2vw;
     justify-content: space-evenly;
     box-sizing: border-box;
@@ -69,7 +72,11 @@
 .title {
     font-size: 2vw;
     text-align: center;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
 }
 
 .description {
@@ -86,7 +93,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     border-radius: 2vw;
     background-color: rgb(234, 234, 234);
 }
@@ -95,7 +102,11 @@
     font-size: 2vw;
     padding: 10px;
     text-align: center;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
 }
 
 .containerOfSlides {
@@ -123,10 +134,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
     width: 3vw;
     height: 5vw;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     cursor: pointer;
     margin: 1vw;
     border-radius: 1vw;
@@ -137,11 +151,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
     width: 3vw;
     height: 5vw;
     transform: rotate(180deg);
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     cursor: pointer;
     margin: 1vw;
     border-radius: 1vw;
@@ -162,7 +179,7 @@
 
 .frTitle {
     font-size: 1.5vw;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     padding: 1.3vw;
     border-radius: 2vw;
     text-align: center;
@@ -177,7 +194,7 @@
 
 .trade1 {
     width: 26vw;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     border-radius: 2vw;
     background-color: rgb(234, 234, 234);
 }
@@ -185,7 +202,7 @@
 .trade2 {
     width: 26vw;
     border-radius: 2vw;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     background-color: rgb(234, 234, 234);
 }
 
@@ -195,7 +212,10 @@
     justify-content: center;
     text-align: center;
     padding: 2vw;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
 }
 
 .descriptionOfTrade {
@@ -222,7 +242,7 @@
     color: black;
     border-radius: 2vw;
     font-size: 1.5vw;
-    background-color:rgb(150, 0, 150);
+    background-color: #b14cff;
     border: none;
     cursor: pointer;
 }
@@ -271,7 +291,7 @@
 
 .prtTitle {
     font-size: 1.5vw;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     padding: 1.3vw;
     border-radius: 2vw;
     text-align: center;
@@ -287,7 +307,7 @@
     width: 20vw;
     height: 13vw;
     cursor: pointer;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
 }
 
 .plainImg {
@@ -319,7 +339,10 @@
     padding: 1vw;
     font-size: 1.7vw;
     text-align: center;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
 }
 
 .workContent1 {
@@ -408,20 +431,17 @@
 
     .next {
         font-size: 8vw;
-        color: rgb(150, 0, 150);
         padding: 3vw;
-        border: 0.2vw rgb(150, 0, 150) solid;
-        cursor: pointer;
+        border: 0.2vw #b14cff solid;
         margin: 3vw;
         border-radius: 2vw;
     }
     
     .back {
         font-size: 8vw;
-        color: rgb(150, 0, 150);
         padding: 3vw;
         transform: rotate(180deg);
-        border: 0.2vw rgb(150, 0, 150) solid;
+        border: 0.2vw #b14cff solid;
         cursor: pointer;
         margin: 3vw;
         border-radius: 2vw;

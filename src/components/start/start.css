@@ -15,13 +15,16 @@
     grid-column: start / middle;
     background-color: rgb(234, 234, 234);
     height: 6vw;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     border-radius: 2vw;
     z-index: 100;
 }
 
 .name {
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
     font-size: 2vw;
     margin-left: 0.5vw;
     z-index: 100;
@@ -48,7 +51,7 @@
     background-color: rgb(234, 234, 234);
     margin-left: 64.8vw;
     margin-top: 6.1vw;
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     z-index: 100;
     border-radius: 1.5vw;
 }
@@ -76,7 +79,7 @@
     flex-direction: column;
     grid-column: middle / end;
     background-color: rgb(234, 234, 234);
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     border-radius: 2vw;
     z-index: 100;
 }
@@ -87,7 +90,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
 }
 
 .options {
@@ -102,7 +108,10 @@
     font-size: 2vw;
     display: flex;
     align-items: center;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
     text-align: center;
 }
 
@@ -140,7 +149,7 @@
         background-color: rgb(234, 234, 234);
         margin-left: 41.4vw;
         margin-top: 15vw;
-        border: 1.5px rgb(150, 0, 150) solid;
+        border: 1.5px #b14cff solid;
         z-index: 100;
         border-radius: 4vw;
     }

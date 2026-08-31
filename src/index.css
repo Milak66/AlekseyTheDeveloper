@@ -8,6 +8,6 @@ body {
 }
 
 ::selection {  
-    background: rgb(150, 0, 150);
+    background: #b14cff;
     color: white;
 }  

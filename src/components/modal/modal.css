@@ -19,7 +19,7 @@
     height: 28vw;
     position: relative;
     background-color: rgb(234, 234, 234);
-    border: 1.5px rgb(150, 0, 150) solid;
+    border: 1.5px #b14cff solid;
     border-radius: 2vw;
 }
   
@@ -65,7 +65,7 @@
       color: black;
       border-radius: 2vw;
       font-size: 1.5vw;
-      background-color:rgb(150, 0, 150);
+      background-color: #b14cff;
       border: none;
       cursor: pointer;
 }

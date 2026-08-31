@@ -21,7 +21,11 @@
 .nameText {
     font-size: 2.5vw;
     text-align: center;
-    color: rgb(150, 0, 150);
+    color: #b14cff;
+
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
     width: 25vw;
 }
 
@@ -44,8 +48,12 @@
     top: 50%;
     transform-origin: center;
     font-size: 2vw;
-    color: rgb(150, 0, 150);
-    border: 1.5px rgb(150, 0, 150) solid;
+    color: #b14cff;
+
+    text-shadow:
+        0 0 8px rgba(177, 76, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.18);
+    border: 1.5px #b14cff solid;
 }
 
 .introAnimation .codeBlock:nth-child(1) {
