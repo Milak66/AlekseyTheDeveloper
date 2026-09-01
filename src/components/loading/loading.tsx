@@ -11,7 +11,6 @@ const Loading: React.FC<LoadingProps> = (): React.ReactNode => {
   const [openWebsite, setOpenWebsite] = useState<boolean>(false);
   const textLang = useSelector((state: RootState) => state.aleksey.textLang);
   const darkFunRef = useRef<HTMLImageElement>(null);
-  
   const dispatch = useDispatch<AppDispatch>();
 
   const stopLoading = () => {
@@ -26,8 +25,10 @@ const Loading: React.FC<LoadingProps> = (): React.ReactNode => {
     let posAround = 1;
     let directionUp = true;
     let animationFrameId: number;
+  
+    const startTime = performance.now(); 
 
-    function loadingAnimation() {
+    function loadingAnimation(currentTime: number) {
       if (directionUp) {
         if (pos < 100) {
           pos += 2;
@@ -43,27 +44,27 @@ const Loading: React.FC<LoadingProps> = (): React.ReactNode => {
           pos += 2;
         }
       }
-      posAround += 3;
-      
+
+      posAround = (posAround + 3) % 360;
+
       if (dark_fun) {
         dark_fun.style.transform = `rotate(${posAround}deg)`;
-        dark_fun.style.bottom = `${pos}px`;
+        dark_fun.style.bottom = `${pos}px`
       }
       
+      if (!openWebsite && currentTime - startTime >= 2000) {
+        setOpenWebsite(true);
+      }
+
       animationFrameId = requestAnimationFrame(loadingAnimation);
     }
-
-    loadingAnimation();
-
-    const timer = setTimeout(() => {
-      setOpenWebsite(true);
-    }, 2000);
+    
+    animationFrameId = requestAnimationFrame(loadingAnimation);
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      clearTimeout(timer);
     };
-  }, []);
+  }, [openWebsite]);
 
   return (
     <div className="loading_place">
